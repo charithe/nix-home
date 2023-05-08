@@ -106,7 +106,7 @@
   programs.bat = {
     enable = true;
     config = {
-      style = "numbers,changes,header";
+      style = "numbers,changes";
       italic-text = "always";
       theme = "TwoDark";
     };
@@ -137,6 +137,9 @@
 
   programs.gh = {
     enable = true;
+    extensions = [
+      pkgs.gh-dash
+    ];
     settings = {
       aliases = {
         co = "pr checkout";
