@@ -248,10 +248,15 @@
     '';
     initExtraFirst = ''
       if [[ -r "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-         source "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+          source "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
       fi
 
-      export LSCOLORS="''$(vivid generate snazzy)"
+      if test -n "$KITTY_INSTALLATION_DIR"; then
+          export KITTY_SHELL_INTEGRATION="enabled"
+          autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
+          kitty-integration
+          unfunction kitty-integration
+      fi
 
       function delete-branches() {
         git branch |
@@ -267,6 +272,7 @@
       export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
       export KIND_EXPERIMENTAL_PROVIDER=podman
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+      export LSCOLORS="''$(vivid generate snazzy)"
     '';
     shellAliases = {
       cd = "z";
