@@ -48,6 +48,7 @@
     vale
     vivid
     yq
+    ytt
   ];
 
   home.file = {
