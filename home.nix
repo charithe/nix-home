@@ -22,7 +22,6 @@
     du-dust
     duf
     fd
-    fira-code
     gcc
     gitui
     glow
