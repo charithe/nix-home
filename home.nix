@@ -22,6 +22,7 @@
     du-dust
     duf
     fd
+    fira-code
     gcc
     gitui
     glow
@@ -235,6 +236,7 @@
     '';
     autocd = true;
     cdpath = ["/home/work"];
+    defaultKeymap = "emacs";
     history = {
       expireDuplicatesFirst = true;
       extended = true;
