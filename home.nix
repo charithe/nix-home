@@ -207,6 +207,8 @@
 
   programs.home-manager.enable = true;
 
+  programs.k9s.enable = true;
+
   programs.lsd = {
     enable = true;
     enableAliases = true;
@@ -232,7 +234,7 @@
     enableSyntaxHighlighting = true;
     enableVteIntegration = true;
     envExtra = ''
-      export PATH=$PATH:$HOME/.local/bin
+      export PATH=$PATH:$HOME/.local/bin:$HOME/.krew/bin
     '';
     autocd = true;
     cdpath = ["/home/work"];
