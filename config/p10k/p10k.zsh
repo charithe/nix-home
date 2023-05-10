@@ -35,6 +35,7 @@
     os_icon                 # os identifier
     dir                     # current directory
     vcs                     # git status
+    kubecontext
     # =========================[ Line #2 ]=========================
     newline                 # \n
     prompt_char             # prompt symbol
@@ -51,10 +52,10 @@
     background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
-    kubecontext             # current kubernetes context (https://kubernetes.io/)
+    #kubecontext             # current kubernetes context (https://kubernetes.io/)
     terraform               # terraform workspace (https://www.terraform.io)
     gcloud                  # google cloud cli account and project (https://cloud.google.com/)
-    google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
+    #google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
     #toolbox                 # toolbox name (https://github.com/containers/toolbox)
     #context                 # user@hostname
     #nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)

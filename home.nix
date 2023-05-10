@@ -33,6 +33,7 @@
     kind
     ko
     krew
+    kubeconform
     kubectl
     kubernetes-helm
     gnumake
@@ -116,6 +117,9 @@
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
+    config = {
+      global.load_dotenv = true;
+    };
   };
 
   programs.exa = {
