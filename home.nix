@@ -44,6 +44,7 @@
     postgresql
     ripgrep
     rustup
+    shellcheck
     skaffold
     stern
     vale
