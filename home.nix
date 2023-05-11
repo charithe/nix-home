@@ -47,6 +47,7 @@
     shellcheck
     skaffold
     stern
+    terraform
     vale
     vivid
     yq
