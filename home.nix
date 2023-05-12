@@ -281,7 +281,7 @@
       export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
       export KIND_EXPERIMENTAL_PROVIDER=podman
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-      export LSCOLORS="''$(vivid generate snazzy)"
+      export LS_COLORS="''$(vivid generate snazzy)"
     '';
     shellAliases = {
       cd = "z";
