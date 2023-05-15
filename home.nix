@@ -41,6 +41,7 @@
     nerdfonts
     nodejs
     pgcli
+    pgweb
     postgresql
     ripgrep
     rustup
@@ -274,6 +275,8 @@
           fzf --multi --preview="git log {}" |
           xargs --no-run-if-empty git branch --delete --force
       }
+
+      export LS_COLORS="''$(vivid generate one-light)"
     '';
     profileExtra = ''
       export PAGER=bat
@@ -281,7 +284,6 @@
       export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
       export KIND_EXPERIMENTAL_PROVIDER=podman
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-      export LS_COLORS="''$(vivid generate snazzy)"
     '';
     shellAliases = {
       cd = "z";
