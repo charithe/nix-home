@@ -19,6 +19,7 @@
     # '')
     age
     btop
+    cue
     du-dust
     duf
     fd
@@ -26,6 +27,7 @@
     gitui
     glow
     gopls
+    gops
     helmfile
     jq
     jwt-cli
