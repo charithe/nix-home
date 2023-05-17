@@ -29,6 +29,7 @@
     gops
     gotestsum
     helmfile
+    ibm-plex
     jq
     jwt-cli
     just
@@ -42,6 +43,7 @@
     minikube
     nerdfonts
     nodejs
+    pandoc
     pgcli
     pgweb
     postgresql
@@ -96,6 +98,14 @@
     };
   };
 
+  xdg.dataFile = {
+    "navi" = {
+      enable = true;
+      source = data/navi;
+      target = "navi";
+      recursive = true;
+    };
+  };
 
   home.sessionVariables = {
   };
@@ -223,6 +233,11 @@
     enableAliases = true;
   };
 
+  programs.navi = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -294,6 +309,7 @@
       hm = "home-manager";
       j = "just";
       k = "kubectl";
+      n = "navi";
       lst = "lsd --tree";
       top = "btop";
     };
@@ -316,4 +332,5 @@
   fonts.fontconfig.enable = true;
   targets.genericLinux.enable = true;
   xdg.mime.enable = true;
+
 }

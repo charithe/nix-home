@@ -1,0 +1,24 @@
+% kubernetes
+
+# Pods by memory usage
+kubectl top pod -A --sort-by memory
+
+# Restart statefulset
+kubectl rollout restart sts/<statefulset> -n <namespace>
+
+# Rollout status for statefulset
+kubectl rollout status sts/<statefulset> -n <namespace>
+
+# Restart deployment
+kubectl rollout restart deploy/<deployment> -n <namespace>
+
+# Rollout status for deployment
+kubectl rollout status deploy/<statefulset> -n <namespace>
+
+
+$ deployment: kubectl get deploy -n <namespace> --no-headers --output=custom-columns=NAME:.metadata.name
+$ namespace: kubectl get ns --no-headers --output=custom-columns=NAME:.metadata.name
+$ statefulset: kubectl get sts -n <namespace> --no-headers --output=custom-columns=NAME:.metadata.name
+
+
+
