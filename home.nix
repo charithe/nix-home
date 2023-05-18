@@ -59,6 +59,7 @@
     terraform
     vale
     vivid
+    yamllint
     yq
     ytt
   ];
