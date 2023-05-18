@@ -28,7 +28,10 @@
     gopls
     gops
     gotestsum
+    grpcurl
     helmfile
+    hurl
+    hyperfine
     ibm-plex
     jq
     jwt-cli
@@ -51,6 +54,7 @@
     rustup
     shellcheck
     skaffold
+    sqlite
     stern
     terraform
     vale
