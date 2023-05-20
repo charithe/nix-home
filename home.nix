@@ -50,6 +50,7 @@
     pgcli
     pgweb
     postgresql
+    restic
     ripgrep
     rustup
     shellcheck
@@ -215,12 +216,27 @@
         };
       };
     };
+    includes = [
+      {
+        condition = "gitdir:~/work/**";
+        contents = {
+          user = {
+            email = "charith@cerbos.dev";
+            name = "Charith Ellawala";
+            signingKey = "B2F1410BDA6DFC9CB3154971E8C66880127C5E29";
+          };
+          commit = {
+            gpgSign = true;
+          };
+        };
+      }
+    ];
     lfs.enable = true;
     signing = {
-      key = "B2F1410BDA6DFC9CB3154971E8C66880127C5E29";
+      key = "CE36ADA89FCB6D9D30F152935CEC9525A9DBF2BE";
       signByDefault = true;
     };
-    userEmail = "charith@cerbos.dev";
+    userEmail = "charith@lucidelectricdreams.com";
     userName = "Charith Ellawala";
   };
 
@@ -273,6 +289,8 @@
       extended = true;
       ignoreDups = true;
       ignoreSpace = true;
+      save = 100000;
+      size = 100000;
     };
     historySubstringSearch.enable = true;
     initExtra = ''
@@ -299,6 +317,10 @@
       }
 
       export LS_COLORS="''$(vivid generate one-light)"
+
+      zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
+      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+      zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
     '';
     profileExtra = ''
       export PAGER=bat
@@ -326,6 +348,18 @@
           tags = [
             "as:theme"
             "depth:1"
+          ];
+        }
+        {
+          name = "Aloxaf/fzf-tab";
+        }
+        {
+          name = "zsh-users/zsh-completions";
+        }
+        {
+          name = "zsh-users/zsh-syntax-highlighting";
+          tags = [
+            "defer:2"
           ];
         }
       ];
