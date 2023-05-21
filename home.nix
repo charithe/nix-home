@@ -41,7 +41,10 @@
     krew
     kubeconform
     kubectl
-    kubernetes-helm
+    (pkgs.wrapHelm pkgs.kubernetes-helm { plugins = [
+      pkgs.kubernetes-helmPlugins.helm-diff
+      pkgs.kubernetes-helmPlugins.helm-secrets
+    ]; })
     gnumake
     minikube
     nerdfonts
@@ -76,6 +79,11 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    "config/gnupg/gpg-agent.conf" = {
+      enable = true;
+      source = config/gnupg/gpg-agent.conf;
+      target = ".gnupg/gpg-agent.conf";
+    };
 
     "config/kitty" = {
       enable = true;
