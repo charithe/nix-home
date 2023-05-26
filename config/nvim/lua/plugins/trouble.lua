@@ -2,6 +2,7 @@ require("trouble").setup({
     mode = "document_diagnostics",
     auto_open = true,
     auto_close = true,
+    auto_preview = false,
     icons = true,
     use_diagnostic_signs = true,
 })

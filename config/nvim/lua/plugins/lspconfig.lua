@@ -52,11 +52,22 @@ lspconfig.gopls.setup {
     settings = {
       gopls = {
         analyses = {
-          unusedparams = true,
           fieldalignment = true,
           nilness = true,
+          shadow = true,
+          unusedparams = true,
+          unusedwrite = true,
+          useany = true,
+        },
+        hints = {
+          compositeLiteralFields = true,
+          constantValues = true,
+          functionTypeParameters = true,
+          parameterNames = true,
+          rangeVariableTypes = true,
         },
         staticcheck = true,
+        ["local"] = "github.com/cerbos",
         gofumpt = true,
         buildFlags = { "-tags=tests,e2e,integration" },
         env = { GOFLAGS="-tags=tests,e2e,integration" },
