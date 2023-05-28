@@ -79,36 +79,52 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    "config/gnupg/gpg-agent.conf" = {
+    ".gnupg/gpg-agent.conf" = {
       enable = true;
       source = config/gnupg/gpg-agent.conf;
       target = ".gnupg/gpg-agent.conf";
     };
 
-    "config/kitty" = {
-      enable = true;
-      source = config/kitty;
-      target = ".config/kitty";
-      recursive = true;
-    };
-
-    "config/nvim" = {
-      enable = true;
-      source = config/nvim;
-      target = ".config/nvim";
-      recursive = true;
-    };
-
-    "config/p10k/p10k.zsh" = {
+    ".p10k.zsh" = {
       enable = true;
       source = config/p10k/p10k.zsh;
       target = ".p10k.zsh";
     };
 
-    "config/syncthing/config.xml" = {
+    ".vale.ini" = {
+      enable = true;
+      source = config/vale/vale.ini;
+      target = ".vale.ini";
+    };
+  };
+
+
+  xdg.configFile = {
+    "kitty" = {
+      enable = true;
+      source = config/kitty;
+      target = "kitty";
+      recursive = true;
+    };
+
+    "nvim" = {
+      enable = true;
+      source = config/nvim;
+      target = "nvim";
+      recursive = true;
+    };
+
+    "syncthing/config.xml" = {
       enable = true;
       source = config/syncthing/config.xml;
-      target = ".config/syncthing/config.xml";
+      target = "syncthing/config.xml";
+    };
+
+    "vale" = {
+      enable = true;
+      source = config/vale;
+      target = "vale";
+      recursive = true;
     };
   };
 
