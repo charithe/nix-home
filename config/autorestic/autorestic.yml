@@ -1,0 +1,10 @@
+version: 2
+locations:
+  docs:
+    from: /home/cell/Documents
+    to: b2bucket
+
+backends:
+  b2bucket:
+    type: b2
+    path: charithe:backup/Documents

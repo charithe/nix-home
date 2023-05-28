@@ -18,6 +18,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     age
+    autorestic
     btop
     du-dust
     duf
@@ -79,6 +80,12 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    ".autorestic.yml" = {
+      enable = true;
+      source = config/autorestic/autorestic.yml;
+      target = ".autorestic.yml";
+    };
+
     ".gnupg/gpg-agent.conf" = {
       enable = true;
       source = config/gnupg/gpg-agent.conf;
