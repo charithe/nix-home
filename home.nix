@@ -378,6 +378,9 @@
           name = "Aloxaf/fzf-tab";
         }
         {
+          name = "chisui/zsh-nix-shell";
+        }
+        {
           name = "zsh-users/zsh-completions";
         }
         {
