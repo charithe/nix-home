@@ -162,12 +162,12 @@ return require("packer").startup(function(use)
     })
 
     use({
-      'phaazon/hop.nvim',
-      branch = 'v2', -- optional but strongly recommended
-      config = function()
-        require("plugins.hop")
-      end,
+        'ellisonleao/glow.nvim',
+        config = function()
+            require('glow').setup()
+        end,
     })
+
 
   if packer_bootstrap then
     vim.notify("Installing plugins...")
