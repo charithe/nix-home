@@ -18,7 +18,6 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     age
-    autorestic
     btop
     du-dust
     duf
@@ -401,42 +400,6 @@
   };
 
   services.syncthing.enable = true;
-
-  systemd.user.services = {
-    autorestic = {
-      Unit = {
-        Description = "Run Autorestic backup";
-      };
-
-      Service = {
-        Type = "simple";
-        ExecStart = "${pkgs.autorestic}/bin/autorestic backup --ci --all --config=/home/cell/.autorestic.yml";
-      };
-
-      Install = {
-        WantedBy = ["default.target"];
-      };
-    };
-  };
-
-  systemd.user.timers = {
-    autorestic = {
-      Unit = {
-        Description = "Run Autorestic backup";
-      };
-
-      Timer = {
-        Unit = "%i.service";
-        OnBootSec = "10min";
-        OnUnitActiveSec = "1d";
-      };
-
-      Install = {
-        WantedBy = ["default.target"];
-      };
-    };
-  };
-
   fonts.fontconfig.enable = true;
   targets.genericLinux.enable = true;
   xdg.mime.enable = true;
