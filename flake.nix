@@ -21,7 +21,7 @@
       };
       homeConfigurations."cell@manticore" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./common.nix ];
+        modules = [ ./common.nix ./manticore.nix ];
       };
     };
 }
