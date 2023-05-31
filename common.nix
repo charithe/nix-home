@@ -19,6 +19,7 @@
     # '')
     age
     btop
+    buf
     du-dust
     duf
     fd
