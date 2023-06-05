@@ -18,6 +18,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     age
+    asciidoctor
     btop
     buf
     du-dust
