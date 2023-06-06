@@ -341,6 +341,10 @@
           unfunction kitty-integration
       fi
 
+      autoload edit-command-line
+      zle -N edit-command-line
+      bindkey '^x^e' edit-command-line
+
       function delete-branches() {
         git branch |
           grep --invert-match '\*' |
