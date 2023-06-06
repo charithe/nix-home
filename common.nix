@@ -48,6 +48,7 @@
       pkgs.kubernetes-helmPlugins.helm-secrets
     ]; })
     gnumake
+    meld
     minikube
     nerdfonts
     nodejs
