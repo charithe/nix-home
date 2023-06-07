@@ -356,7 +356,6 @@
       export LS_COLORS="''$(vivid generate one-light)"
 
       zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
-      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
       zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
     '';
     profileExtra = ''
@@ -389,6 +388,9 @@
         }
         {
           name = "Aloxaf/fzf-tab";
+        }
+        {
+          name = "Freed-Wu/fzf-tab-source";
         }
         {
           name = "chisui/zsh-nix-shell";
