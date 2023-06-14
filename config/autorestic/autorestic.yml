@@ -3,6 +3,11 @@ locations:
   docs:
     from: /home/cell/Documents
     to: b2bucket
+    forget: prune
+    options:
+      forget:
+        keep-last: 7
+
 
 backends:
   b2bucket:
