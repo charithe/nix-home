@@ -55,7 +55,7 @@
     pandoc
     pgcli
     pgweb
-    postgresql
+    postgresql_15
     restic
     ripgrep
     rustup
