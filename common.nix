@@ -56,6 +56,7 @@
     pgcli
     pgweb
     postgresql_15
+    procs
     restic
     ripgrep
     rustup
