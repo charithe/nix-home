@@ -21,6 +21,7 @@
     asciidoctor
     btop
     buf
+    cmake
     du-dust
     duf
     fd
