@@ -58,6 +58,7 @@
     pgweb
     postgresql_15
     procs
+    protobuf
     restic
     ripgrep
     rustup
