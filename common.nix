@@ -70,7 +70,7 @@
     vale
     vivid
     yamllint
-    yq
+    yq-go
     ytt
   ];
 

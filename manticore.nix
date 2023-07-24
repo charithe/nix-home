@@ -7,5 +7,6 @@
     netlify-cli
     telepresence2
     temurin-bin-11
+    trivy
   ];
 }
