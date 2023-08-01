@@ -22,6 +22,7 @@
     btop
     buf
     cmake
+    comby
     du-dust
     duf
     fd
