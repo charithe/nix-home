@@ -313,7 +313,6 @@
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
-    enableSyntaxHighlighting = true;
     enableVteIntegration = true;
     envExtra = ''
       export PATH=$PATH:$HOME/.local/bin:$HOME/.krew/bin
@@ -330,6 +329,9 @@
       size = 100000;
     };
     historySubstringSearch.enable = true;
+    syntaxHighlighting = {
+      enable = true;
+    };
     initExtra = ''
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
