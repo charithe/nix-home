@@ -29,6 +29,7 @@
     gcc
     gitui
     glow
+    gnumake
     gopls
     gops
     gotestsum
@@ -49,7 +50,7 @@
       pkgs.kubernetes-helmPlugins.helm-diff
       pkgs.kubernetes-helmPlugins.helm-secrets
     ]; })
-    gnumake
+    lapce
     meld
     minikube
     nerdfonts
