@@ -30,6 +30,7 @@
     gitui
     glow
     gnumake
+    go
     gopls
     gops
     gotestsum
