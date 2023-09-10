@@ -30,7 +30,6 @@
     gitui
     glow
     gnumake
-    go
     gopls
     gops
     gotestsum
@@ -51,7 +50,6 @@
       pkgs.kubernetes-helmPlugins.helm-diff
       pkgs.kubernetes-helmPlugins.helm-secrets
     ]; })
-    lapce
     meld
     minikube
     nerdfonts
@@ -182,7 +180,7 @@
     };
   };
 
-  programs.exa = {
+  programs.eza = {
     enable = true;
     enableAliases = false;
     git = true;
@@ -282,6 +280,7 @@
   programs.go = {
     enable = true;
     goBin = ".local/bin";
+    package = pkgs.go_1_21;
   };
 
   programs.home-manager.enable = true;
