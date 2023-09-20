@@ -1,0 +1,8 @@
+% gcloud
+
+# Get latest digest of container image
+gcloud artifacts docker images list <region>-docker.pkg.dev/<project>/<repo> --filter="package=<region>-docker.pkg.dev/<project>/<repo>/<image>" --sort-by="~UPDATE_TIME" --limit=1 --format='value(format("{{\"version\": \"{0}\"}}",version))'
+
+$ region: gcloud compute regions list --format='value(format("{0}", name))'
+$ project: gcloud projects list --format='value(format("{0}", project_id))'
+$ repo: gcloud artifacts repositories list --project=<project> --format='value(format("{0}",name))'
