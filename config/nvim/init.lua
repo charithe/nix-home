@@ -1,3 +1,2 @@
-require("cfg.functions")
-require("cfg.bootstrap")
-require("cfg.editor")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

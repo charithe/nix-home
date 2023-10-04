@@ -1,26 +1,11 @@
-require('nvim-treesitter.configs').setup({
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
+return {
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      rainbow = {
+        enable = true,
+        extended_mode = true,
+      },
+    },
   },
-  indent = {
-      enable = true,
-  },
-  incremental_selection = {
-      enable = true,
-  },
-  ensure_installed = {
-      "comment",
-      "go",
-      "json",
-      "make",
-      "rust",
-      "yaml",
-      "python",
-      "hcl",
-  },
-  rainbow = {
-      enable = true,
-      extended_mode = true,
-  }
-})
+}
