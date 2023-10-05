@@ -17,6 +17,7 @@ opt.colorcolumn = "120"
 opt.directory = vim.fn.stdpath("data") .. "/swap"
 opt.encoding = "utf-8"
 opt.expandtab = true
+opt.linebreak = true
 opt.list = false
 opt.listchars =
   { tab = "→ ", space = "⋅", eol = "↲", nbsp = "␣", trail = "•", extends = "❯", precedes = "❮" }

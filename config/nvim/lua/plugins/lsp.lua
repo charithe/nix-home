@@ -3,8 +3,8 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        bufls = {},
         gopls = {
-          cmd = { "gopls", "serve" },
           keys = {
             -- Workaround for the lack of a DAP strategy in neotest-go: https://github.com/nvim-neotest/neotest-go/issues/12
             { "<leader>td", "<cmd>lua require('dap-go').debug_test()<CR>", desc = "Debug Nearest (Go)" },
@@ -51,6 +51,13 @@ return {
             },
           },
         },
+        helm_ls = {},
+        jsonls = {},
+        postgres_lsp = {},
+        ruff_lsp = {},
+        rust_analyzer = {},
+        terraform_lsp = {},
+        yamlls = {},
       },
     },
   },
