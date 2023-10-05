@@ -9,6 +9,8 @@ vim.g.tokyonight_italic_functions = true
 
 local opt = vim.opt
 
+opt.autoindent = true
+opt.autoread = true
 opt.backspace = "indent,eol,start"
 opt.backupdir = vim.fn.stdpath("data") .. "/backup"
 opt.colorcolumn = "120"
@@ -32,3 +34,5 @@ opt.spelloptions = "camel"
 opt.tabstop = 4
 opt.ttyfast = true
 opt.undodir = vim.fn.stdpath("data") .. "/undo"
+opt.wrap = true
+opt.whichwrap = "<,>,h,l"

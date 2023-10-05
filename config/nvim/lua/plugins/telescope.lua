@@ -9,6 +9,12 @@ return {
           },
         },
       },
+      pickers = {
+        buffers = {
+          sort_mru = true,
+          ignore_current_buffer = true,
+        },
+      },
     },
     dependencies = {
       "nvim-telescope/telescope-fzf-native.nvim",
