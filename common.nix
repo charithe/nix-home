@@ -15,7 +15,7 @@ in
 
   home.username = "cell";
   home.homeDirectory = "/home/cell";
-  home.stateVersion = "22.11"; # Please read the comment before changing.
+  home.stateVersion = "23.05";
   home.packages = with pkgs; [
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -66,8 +66,10 @@ in
     meld
     minikube
     nerdfonts
+    nix-index
     nodejs
     pandoc
+    patchelf
     pgcli
     pgweb
     postgresql_15
