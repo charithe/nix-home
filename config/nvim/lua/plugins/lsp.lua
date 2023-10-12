@@ -10,6 +10,7 @@ return {
             { "<leader>td", "<cmd>lua require('dap-go').debug_test()<CR>", desc = "Debug Nearest (Go)" },
             { "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", desc = "Rename" },
           },
+          filetypes = { "go", "gomod", "gowork", "gotmpl" },
           settings = {
             gopls = {
               gofumpt = true,

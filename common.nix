@@ -126,6 +126,13 @@ in
 
 
   xdg.configFile = {
+    "gh-dash" = {
+      enable = true;
+      source = config/gh-dash;
+      target = "gh-dash";
+      recursive = true;
+    };
+
     "kitty" = {
       enable = true;
       source = config/kitty;

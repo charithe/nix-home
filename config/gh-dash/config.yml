@@ -1,0 +1,17 @@
+---
+prSections:
+  - title: All
+    filters: is:open org:cerbos
+
+  - title: My Pull Requests
+    filters: is:open author:@me
+    layout:
+      author:
+        hidden: true
+repoPaths:
+  cerbos/*: ~/work/*
+keybindings:
+  prs:
+    - key: c
+      command: >
+        cd {{ .RepoPath }} && gh pr checkout {{ .PrNumber }}
