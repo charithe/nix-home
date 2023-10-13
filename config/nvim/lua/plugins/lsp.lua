@@ -1,6 +1,15 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    init = function()
+      local keys = require("lazyvim.plugins.lsp.keymaps").get()
+      keys[#keys + 1] = { "K", "<cmd>Lspsaga hover_doc<CR>" }
+      keys[#keys + 1] = { "<leader>gi", "<cmd>Lspsaga incoming_calls<CR>" }
+      keys[#keys + 1] = { "<leader>go", "<cmd>Lspsaga outgoing_calls<CR>" }
+      keys[#keys + 1] = { "<leader>gf", "<cmd>Lspsaga finder<CR>" }
+      keys[#keys + 1] = { "<leader>gd", "<cmd>Lspsaga peek_definition<CR>" }
+      keys[#keys + 1] = { "<leader>gt", "<cmd>Lspsaga peek_type_definition<CR>" }
+    end,
     opts = {
       servers = {
         bufls = {},
