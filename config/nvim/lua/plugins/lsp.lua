@@ -9,6 +9,7 @@ return {
       keys[#keys + 1] = { "<leader>gf", "<cmd>Lspsaga finder<CR>" }
       keys[#keys + 1] = { "<leader>gd", "<cmd>Lspsaga peek_definition<CR>" }
       keys[#keys + 1] = { "<leader>gt", "<cmd>Lspsaga peek_type_definition<CR>" }
+      keys[#keys + 1] = { "<leader>gs", "<cmd>Lspsaga outline<CR>" }
     end,
     opts = {
       servers = {
