@@ -35,6 +35,7 @@ in
     buf
     cmake
     comby
+    docker-compose
     du-dust
     duf
     fd
