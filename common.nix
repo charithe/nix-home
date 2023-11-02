@@ -83,6 +83,7 @@ in
     skaffold
     sqlite
     stern
+    tailspin
     tfoldpkg.terraform
     vale
     vivid
