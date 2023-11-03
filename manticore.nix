@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    antora
     cosign
     jetbrains.idea-community
     jose

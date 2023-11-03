@@ -70,6 +70,7 @@ in
     nix-index
     nodejs
     pandoc
+    panicparse
     patchelf
     pgcli
     pgweb
