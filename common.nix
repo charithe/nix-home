@@ -86,6 +86,7 @@ in
     stern
     tailspin
     tfoldpkg.terraform
+    tokei
     vale
     vivid
     yamllint
@@ -120,6 +121,12 @@ in
       enable = true;
       source = config/p10k/p10k.zsh;
       target = ".p10k.zsh";
+    };
+
+    ".terraformrc" = {
+      enable = true;
+      source = config/terraform/terraformrc;
+      target = ".terraformrc";
     };
 
     ".vale.ini" = {
@@ -173,9 +180,6 @@ in
       target = "navi";
       recursive = true;
     };
-  };
-
-  home.sessionVariables = {
   };
 
   programs.atuin = {
