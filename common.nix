@@ -82,6 +82,7 @@ in
     rustup
     shellcheck
     skaffold
+    skopeo
     sqlite
     stern
     tailspin
