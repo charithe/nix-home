@@ -80,6 +80,7 @@ in
     restic
     ripgrep
     rustup
+    semgrep
     shellcheck
     skaffold
     skopeo
