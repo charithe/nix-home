@@ -77,6 +77,7 @@ in
     postgresql_15
     procs
     protobuf
+    pspg
     restic
     ripgrep
     rustup
