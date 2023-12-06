@@ -4,9 +4,9 @@
   home.packages = with pkgs; [
     antora
     cosign
+    istioctl
     jetbrains.idea-community
     jose
-    lnav
     netlify-cli
     telepresence2
     temurin-bin-11
