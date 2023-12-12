@@ -236,6 +236,7 @@ in
       pkgs.gh-dash
     ];
     settings = {
+      version = 1;
       aliases = {
         co = "pr checkout";
         pl = "pr list";
