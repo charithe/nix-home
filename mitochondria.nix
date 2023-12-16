@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     autorestic
+    llvmPackages_17.libcxxClang
   ];
 
   home.file = {

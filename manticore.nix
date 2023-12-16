@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     antora
     cosign
+    gcc
     istioctl
     jetbrains.idea-community
     jose

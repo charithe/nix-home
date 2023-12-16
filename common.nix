@@ -39,7 +39,6 @@ in
     du-dust
     duf
     fd
-    gcc
     gitui
     glibc
     glow
