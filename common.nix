@@ -31,6 +31,7 @@ in
     # '')
     age
     asciidoctor
+    ast-grep
     btop
     buf
     cmake
@@ -80,7 +81,6 @@ in
     restic
     ripgrep
     rustup
-    semgrep
     shellcheck
     skaffold
     skopeo
