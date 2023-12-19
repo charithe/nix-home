@@ -35,7 +35,6 @@ in
     btop
     buf
     cmake
-    comby
     docker-compose
     du-dust
     duf
@@ -239,6 +238,9 @@ in
       aliases = {
         co = "pr checkout";
         pl = "pr list";
+        pc = "pr checks";
+        pa = "pr review --approve";
+        pm = "pr merge -s -d";
       };
       git_protocol = "ssh";
     };
