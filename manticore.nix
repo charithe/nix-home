@@ -12,6 +12,7 @@
     scc
     telepresence2
     temurin-bin-11
+    tree-sitter
     trivy
   ];
 }
