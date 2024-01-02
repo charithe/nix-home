@@ -39,3 +39,6 @@ opt.ttyfast = true
 opt.undodir = vim.fn.stdpath("data") .. "/undo"
 opt.wrap = true
 opt.whichwrap = "<,>,h,l"
+
+vim.o.t_TI = "^[[4?h"
+vim.o.t_TE = "^[[4?l"
