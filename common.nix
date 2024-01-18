@@ -48,6 +48,7 @@ in
     gotestsum
     grpcurl
     helmfile
+    hexyl
     hurl
     hyperfine
     ibm-plex
