@@ -9,6 +9,7 @@
     istioctl
     jetbrains.idea-community
     jose
+    natscli
     netlify-cli
     scc
     telepresence2
