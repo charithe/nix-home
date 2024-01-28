@@ -34,6 +34,7 @@ return {
         "vim",
         "vimdoc",
         "yaml",
+        "zig",
       },
       rainbow = {
         enable = true,

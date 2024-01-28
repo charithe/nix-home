@@ -94,6 +94,8 @@ in
     yamllint
     yq-go
     ytt
+    zig
+    zig-shell-completions
   ];
 
   home.file = {
