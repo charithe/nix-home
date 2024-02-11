@@ -94,7 +94,7 @@ in
     yamllint
     yq-go
     ytt
-    zig
+    zigpkgs.master
     zig-shell-completions
   ];
 

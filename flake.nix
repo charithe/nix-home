@@ -8,20 +8,21 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zig.url = "github:mitchellh/zig-overlay";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, zig, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations."cell@mitochondria" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./common.nix ./mitochondria.nix ];
+        modules = [ ./common.nix ./mitochondria.nix ({nixpkgs.overlays = [zig.overlays.default];}) ];
       };
       homeConfigurations."cell@manticore" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./common.nix ./manticore.nix ];
+        modules = [ ./common.nix ./manticore.nix ({nixpkgs.overlays = [zig.overlays.default];}) ];
       };
     };
 }
