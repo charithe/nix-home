@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     antora
+    clickhouse
     cosign
     d2
     gcc
