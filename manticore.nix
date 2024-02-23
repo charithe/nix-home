@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     antora
     clickhouse
+    corepack_latest
     cosign
     d2
     gcc
