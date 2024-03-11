@@ -7,6 +7,7 @@
     corepack_latest
     cosign
     d2
+    flyctl
     gcc
     istioctl
     jetbrains.idea-community
