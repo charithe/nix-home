@@ -254,6 +254,8 @@ in
       cm = "checkout main";
       lg = "log --color --graph --decorate --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset'";
       sync =  "!BRANCH=$(git symbolic-ref --short HEAD) && git fetch upstream && git merge --ff-only upstream/$BRANCH && git push origin $BRANCH";
+      wta = "!f(){ git worktree add -b $1 ../$1; cd ../$1; }; f";
+      wtr = "!f(){ git worktree remove $1 && git branch -D $1; }; f";
     };
     delta = {
       enable = true;
