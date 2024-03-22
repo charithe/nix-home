@@ -35,6 +35,7 @@ in
     btop
     buf
     cmake
+    difftastic
     docker-compose
     du-dust
     duf
@@ -258,7 +259,7 @@ in
       wtr = "!f(){ git worktree remove $1 && git branch -D $1; }; f";
     };
     delta = {
-      enable = true;
+      enable = false;
       options = {
         features = "decorations";
         side-by-side = true;
@@ -268,6 +269,9 @@ in
         line-numbers = true;
         pager = "less";
       };
+    };
+    difftastic = {
+        enable = true;
     };
     extraConfig = {
       branch = {
