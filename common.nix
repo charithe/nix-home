@@ -34,6 +34,7 @@ in
     ast-grep
     btop
     buf
+    charm-freeze
     cmake
     difftastic
     docker-compose
