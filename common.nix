@@ -51,6 +51,7 @@ in
     grpcurl
     helmfile
     hexyl
+    httpstat
     hurl
     hyperfine
     ibm-plex
