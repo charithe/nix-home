@@ -8,6 +8,7 @@
     cosign
     flyctl
     gcc
+    ghz
     istioctl
     jetbrains.idea-community
     jose
