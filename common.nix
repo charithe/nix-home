@@ -30,6 +30,7 @@ in
     #   echo "Hello, ${config.home.username}!"
     # '')
     age
+    angle-grinder
     asciidoctor
     ast-grep
     btop
