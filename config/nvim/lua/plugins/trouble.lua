@@ -1,4 +1,5 @@
 return {
+  --[[
   {
     "folke/trouble.nvim",
     opts = {
@@ -9,4 +10,6 @@ return {
       icons = true,
     },
   },
+    ]]
+  --
 }
