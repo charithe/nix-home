@@ -14,6 +14,7 @@
     jose
     natscli
     netlify-cli
+    redocly
     scc
     telepresence2
     temurin-bin-11
