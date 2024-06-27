@@ -10,7 +10,7 @@
     gcc
     ghz
     istioctl
-    #jetbrains.idea-community
+    jetbrains.idea-community
     jose
     natscli
     netlify-cli
