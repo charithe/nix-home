@@ -98,6 +98,7 @@ in
     yamllint
     yq-go
     ytt
+    zed-editor
     zigpkgs.master
     zig-shell-completions
   ];
