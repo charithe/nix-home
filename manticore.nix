@@ -16,6 +16,7 @@
     netlify-cli
     redocly
     scc
+    syft
     telepresence2
     temurin-bin-11
     tree-sitter
