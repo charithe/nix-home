@@ -9,6 +9,7 @@
     flyctl
     gcc
     ghz
+    glasskube
     istioctl
     jetbrains.idea-community
     jose
