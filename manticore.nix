@@ -6,6 +6,8 @@
     clickhouse
     corepack_latest
     cosign
+    crane
+    dive
     flyctl
     gcc
     ghz
