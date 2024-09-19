@@ -35,6 +35,7 @@ in
     ast-grep
     btop
     buf
+    cargo-binstall
     charm-freeze
     cmake
     difftastic
@@ -85,6 +86,7 @@ in
     pspg
     restic
     ripgrep
+    ripgrep-all
     rustup
     shellcheck
     skaffold
