@@ -17,6 +17,7 @@
     jose
     natscli
     netlify-cli
+    pgformatter
     redocly
     scc
     syft
