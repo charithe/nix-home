@@ -102,7 +102,7 @@ in
     yq-go
     ytt
     zed-editor
-    zigpkgs.master
+        #zigpkgs.master
     zig-shell-completions
   ];
 
