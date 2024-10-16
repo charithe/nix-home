@@ -1,0 +1,11 @@
+% git
+
+# Create patch without difftastic
+git diff --no-ext-diff -p
+
+# Create worktree
+git worktree add -b <branch> ../<branch>
+
+# Delete worktree
+git worktree remove <branch> && rm -rf ../<branch>
+
