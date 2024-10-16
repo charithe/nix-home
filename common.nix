@@ -96,13 +96,14 @@ in
     tailspin
     tfoldpkg.terraform
     tokei
+    trippy
     vale
     vivid
     yamllint
     yq-go
     ytt
     zed-editor
-        #zigpkgs.master
+    zigpkgs.master
     zig-shell-completions
   ];
 
@@ -229,7 +230,7 @@ in
   programs.eza = {
     enable = true;
     git = true;
-    icons = true;
+    icons = "auto";
   };
 
   programs.fastfetch = {
