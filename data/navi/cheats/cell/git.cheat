@@ -4,8 +4,10 @@
 git diff --no-ext-diff -p
 
 # Create worktree
-git worktree add -b <branch> ../<branch>
+git worktree add -b <new_branch> ../<new_branch> && cd ../<new_branch>
 
 # Delete worktree
-git worktree remove <branch> && rm -rf ../<branch>
+git worktree remove <worktree_branch> && rm -rf ../<worktree_branch>
+
+$ worktree_branch: git worktree list --porcelain | grep branch | sed -e 's#branch refs/heads/##'
 
