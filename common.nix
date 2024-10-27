@@ -42,8 +42,10 @@ in
     docker-compose
     du-dust
     duf
+    erlang
     fd
     gitui
+    gleam
     glibc
     glow
     gnumake

@@ -6,6 +6,7 @@ return {
         "bash",
         "dot",
         "dockerfile",
+        "gleam",
         "go",
         "gomod",
         "gosum",
