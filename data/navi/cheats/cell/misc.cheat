@@ -1,0 +1,4 @@
+% misc
+
+# Generate patch from diff
+diff -Naru <file1> <file2>
