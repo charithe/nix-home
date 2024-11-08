@@ -59,6 +59,7 @@ in
     hurl
     hyperfine
     ibm-plex
+    imhex
     jq
     jwt-cli
     just
