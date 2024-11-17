@@ -77,7 +77,6 @@ in
     minikube
     nerdfonts
     nix-index
-    nodejs
     pandoc
     panicparse
     patchelf
