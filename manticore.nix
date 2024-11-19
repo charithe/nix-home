@@ -7,6 +7,7 @@
     corepack_latest
     cosign
     crane
+    dbeaver-bin
     dive
     flyctl
     gcc
