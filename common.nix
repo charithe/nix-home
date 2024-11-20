@@ -82,7 +82,7 @@ in
     patchelf
     pgcli
     pgweb
-    postgresql_16
+    postgresql_17
     procs
     protobuf
     pspg
