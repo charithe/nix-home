@@ -75,7 +75,23 @@ in
     magic-wormhole
     meld
     minikube
-    nerdfonts
+    nerd-fonts.anonymice
+    nerd-fonts.aurulent-sans-mono
+    nerd-fonts.blex-mono
+    nerd-fonts.cousine
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.envy-code-r
+    nerd-fonts.fira-code
+    nerd-fonts.fira-mono
+    nerd-fonts.go-mono
+    nerd-fonts.hack
+    nerd-fonts.hasklug
+    nerd-fonts.inconsolata
+    nerd-fonts.inconsolata-go
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.monoid
+    nerd-fonts.sauce-code-pro
+    nerd-fonts.symbols-only
     nix-index
     pandoc
     panicparse
