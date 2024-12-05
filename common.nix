@@ -112,7 +112,8 @@ in
     sqlite
     stern
     tailspin
-    tfoldpkg.terraform
+        #tfoldpkg.terraform
+    terraform
     tokei
     trippy
     vale
