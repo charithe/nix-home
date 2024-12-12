@@ -34,6 +34,7 @@ in
     asciidoctor
     ast-grep
     btop
+    buildkit
     buf
     cargo-binstall
     charm-freeze
