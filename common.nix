@@ -94,6 +94,7 @@ in
     nerd-fonts.sauce-code-pro
     nerd-fonts.symbols-only
     nix-index
+    ollama
     pandoc
     panicparse
     patchelf
