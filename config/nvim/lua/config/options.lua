@@ -6,6 +6,7 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
+vim.g.lazyvim_rust_diagnostics = "bacon-ls"
 
 local opt = vim.opt
 

@@ -13,6 +13,9 @@ return {
     end,
     opts = {
       servers = {
+        bacon_ls = {
+          enabled = diagnostics == "bacon-ls",
+        },
         bufls = {},
         gleam = {},
         gopls = {
@@ -67,7 +70,7 @@ return {
         jsonls = {},
         postgres_lsp = {},
         ruff_lsp = {},
-        rust_analyzer = {},
+        rust_analyzer = { enabled = false },
         terraform_lsp = {},
         tsserver = {},
         yamlls = {},

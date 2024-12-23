@@ -26,6 +26,7 @@ return {
         "python",
         "query",
         "regex",
+        "ron",
         "rust",
         "sql",
         "terraform",
