@@ -111,6 +111,7 @@ in
     shellcheck
     skaffold
     skopeo
+    spacer
     sqlite
     stern
     tailspin
