@@ -370,6 +370,11 @@ in
 
   programs.k9s.enable = true;
 
+  programs.kubecolor = {
+    enable = true;
+    enableAlias = true;
+  };
+
   programs.lsd = {
     enable = true;
     enableAliases = true;
