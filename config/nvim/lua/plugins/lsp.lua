@@ -70,7 +70,6 @@ return {
         jsonls = {},
         postgres_lsp = {},
         ruff_lsp = {},
-        rust_analyzer = { enabled = false },
         terraform_lsp = {},
         tsserver = {},
         yamlls = {},
