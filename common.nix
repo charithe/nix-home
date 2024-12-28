@@ -73,7 +73,6 @@ in
       pkgs.kubernetes-helmPlugins.helm-diff
       pkgs.kubernetes-helmPlugins.helm-secrets
     ]; })
-    magic-wormhole
     meld
     minikube
     nerd-fonts.anonymice
