@@ -93,6 +93,7 @@ in
     nerd-fonts.sauce-code-pro
     nerd-fonts.symbols-only
     nix-index
+    nodejs
     ollama
     pandoc
     panicparse
