@@ -1,6 +1,9 @@
 set dotenv-load := true
 
-default: update switch collect-garbage
+default: format update switch collect-garbage
+
+format:
+    @ alejandra *.nix
 
 update:
     @ nix flake update

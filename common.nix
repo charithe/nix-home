@@ -1,12 +1,13 @@
-{ config, pkgs, ... }:
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   tfoldpkg = import (builtins.fetchTarball {
     url = "https://github.com/NixOS/nixpkgs/archive/4ab8a3de296914f3b631121e9ce3884f1d34e1e5.tar.gz";
     sha256 = "095mc0mlag8m9n9zmln482a32nmbkr4aa319f2cswyfrln9j41cr";
-  }) { system = "x86_64-linux"; };
-
-in
-{
+  }) {system = "x86_64-linux";};
+in {
   nixpkgs = {
     config = {
       allowUnfree = true;
@@ -30,6 +31,7 @@ in
     #   echo "Hello, ${config.home.username}!"
     # '')
     age
+    alejandra
     angle-grinder
     asciidoctor
     ast-grep
@@ -69,10 +71,12 @@ in
     krew
     kubeconform
     kubectl
-    (pkgs.wrapHelm pkgs.kubernetes-helm { plugins = [
-      pkgs.kubernetes-helmPlugins.helm-diff
-      pkgs.kubernetes-helmPlugins.helm-secrets
-    ]; })
+    (pkgs.wrapHelm pkgs.kubernetes-helm {
+      plugins = [
+        pkgs.kubernetes-helmPlugins.helm-diff
+        pkgs.kubernetes-helmPlugins.helm-secrets
+      ];
+    })
     meld
     minikube
     nerd-fonts.anonymice
@@ -115,7 +119,7 @@ in
     sqlite
     stern
     tailspin
-        #tfoldpkg.terraform
+    #tfoldpkg.terraform
     terraform
     tokei
     trippy
@@ -170,7 +174,6 @@ in
       target = ".vale.ini";
     };
   };
-
 
   xdg.configFile = {
     "gh-dash" = {
@@ -293,7 +296,7 @@ in
     aliases = {
       cm = "checkout main";
       lg = "log --color --graph --decorate --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset'";
-      sync =  "!BRANCH=$(git symbolic-ref --short HEAD) && git fetch upstream && git merge --ff-only upstream/$BRANCH && git push origin $BRANCH";
+      sync = "!BRANCH=$(git symbolic-ref --short HEAD) && git fetch upstream && git merge --ff-only upstream/$BRANCH && git push origin $BRANCH";
       wta = "!f(){ git worktree add -b $1 ../$1; cd ../$1; }; f";
       wtr = "!f(){ git worktree remove $1 && git branch -D $1; }; f";
     };
@@ -310,7 +313,7 @@ in
       };
     };
     difftastic = {
-        enable = true;
+      enable = true;
     };
     extraConfig = {
       branch = {
