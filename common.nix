@@ -92,7 +92,6 @@ in {
     nerd-fonts.hasklug
     nerd-fonts.inconsolata
     nerd-fonts.inconsolata-go
-    nerd-fonts.jetbrains-mono
     nerd-fonts.monoid
     nerd-fonts.sauce-code-pro
     nerd-fonts.symbols-only
@@ -181,6 +180,12 @@ in {
       source = config/gh-dash;
       target = "gh-dash";
       recursive = true;
+    };
+
+    "ghostty/config" = {
+      enable = true;
+      source = config/ghostty/config;
+      target = "ghostty/config";
     };
 
     "kitty" = {
