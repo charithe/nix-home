@@ -19,7 +19,7 @@
     #jetbrains.idea-community
     jose
     natscli
-    netlify-cli
+    #netlify-cli
     pgformatter
     redocly
     scc
