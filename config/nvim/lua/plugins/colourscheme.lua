@@ -5,7 +5,6 @@ return {
       style = "night",
       dim_inactive = true,
       lualine_bold = true,
-      transparent = true,
     },
   },
   {
