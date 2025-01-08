@@ -72,6 +72,7 @@ return {
         ruff_lsp = {},
         terraform_lsp = {},
         tsserver = {},
+        vale_ls = {},
         yamlls = {},
         zls = {},
       },
