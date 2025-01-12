@@ -122,6 +122,7 @@ in {
     terraform
     tokei
     trippy
+    vale
     vivid
     yamllint
     yq-go
