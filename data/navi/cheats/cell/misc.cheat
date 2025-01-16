@@ -2,3 +2,6 @@
 
 # Generate patch from diff
 diff -Naru <file1> <file2>
+
+# Launch telepresence without io limits
+systemd-run --scope --user telepresence connect
