@@ -120,9 +120,11 @@ in {
     tailspin
     #tfoldpkg.terraform
     terraform
+    topgrade
     tokei
     trippy
     typst
+    uv
     vale
     vivid
     yamllint
@@ -207,6 +209,12 @@ in {
       enable = true;
       source = config/syncthing/config.xml;
       target = "syncthing/config.xml";
+    };
+
+    "topgrade/topgrade.toml" = {
+      enable = true;
+      source = config/topgrade/topgrade.toml;
+      target = "topgrade/topgrade.toml";
     };
 
     "vale" = {

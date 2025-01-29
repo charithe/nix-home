@@ -1,0 +1,6 @@
+[firmware]
+upgrade = false
+
+[containers]
+ignored_containers = ["*"]
+runtime = "podman"

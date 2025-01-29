@@ -15,3 +15,6 @@ collect-garbage:
     @ home-manager expire-generations "-12 hours"
     @ nix-collect-garbage
 
+upgrade:
+    @ topgrade
+
