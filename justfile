@@ -16,5 +16,5 @@ collect-garbage:
     @ nix-collect-garbage
 
 upgrade:
-    @ topgrade --only flatpak gnome_shell_extensions helm home_manager krew nix rustup system
+    @ topgrade --only custom_commands flatpak gnome_shell_extensions helm home_manager krew nix rustup system
 

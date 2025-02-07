@@ -6,3 +6,6 @@ upgrade = false
 [containers]
 ignored_containers = ["*"]
 runtime = "podman"
+
+[commands]
+lazyvim = "~/.nix-profile/bin/vim --headless '+Lazy update' '+qa'"
