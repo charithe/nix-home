@@ -381,7 +381,7 @@ in {
   programs.go = {
     enable = true;
     goBin = ".local/bin";
-    package = pkgs.go_1_23;
+    package = pkgs.go_1_24;
   };
 
   programs.home-manager.enable = true;
