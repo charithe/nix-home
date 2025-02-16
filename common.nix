@@ -44,6 +44,7 @@ in {
     difftastic
     docker-compose
     du-dust
+    duckdb
     duf
     erlang
     fd
