@@ -10,7 +10,7 @@ return {
     },
     build = function()
       require("pkl-neovim.internal").init()
-      vim.cmd("TSInstall! pkl")
+      vim.cmd("TSInstall pkl")
     end,
   },
 }
