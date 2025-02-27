@@ -118,7 +118,7 @@ in {
     spacer
     sqlite
     stern
-    tailspin
+        tailspin
     #tfoldpkg.terraform
     terraform
     tinygo
