@@ -121,7 +121,6 @@ in {
     tailspin
     #tfoldpkg.terraform
     terraform
-    tinygo
     topgrade
     tokei
     trippy
