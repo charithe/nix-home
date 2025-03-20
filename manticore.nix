@@ -23,6 +23,7 @@
     pgformatter
     redocly
     scc
+    spire
     syft
     telepresence2
     temurin-bin-11

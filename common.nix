@@ -98,6 +98,7 @@ in {
     nerd-fonts.symbols-only
     nix-index
     nodejs
+    numbat
     ollama
     pandoc
     panicparse
