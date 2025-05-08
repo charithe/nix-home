@@ -11,6 +11,10 @@ return {
       keys[#keys + 1] = { "<leader>gt", "<cmd>Lspsaga peek_type_definition<CR>" }
       keys[#keys + 1] = { "<leader>gs", "<cmd>Lspsaga outline<CR>" }
     end,
+    dependencies = {
+      "mason-org/mason.nvim",
+      "mason-org/mason-lspconfig.nvim",
+    },
     opts = {
       servers = {
         bacon_ls = {
