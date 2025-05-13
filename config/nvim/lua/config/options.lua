@@ -8,7 +8,7 @@ vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
 vim.g.lazyvim_rust_diagnostics = "bacon-ls"
 
-vim.diagnostic.config({ virtual_lines = true })
+-- vim.diagnostic.config({ virtual_lines = true })
 
 local opt = vim.opt
 

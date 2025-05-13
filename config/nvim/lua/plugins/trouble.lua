@@ -9,6 +9,9 @@ return {
     },
     config = function()
       vim.diagnostic.config({
+        virtual_text = false,
+        severity_sort = true,
+        virtual_lines = true,
         signs = {
           text = {
             [vim.diagnostic.severity.ERROR] = LazyVim.config.icons.diagnostics.Error,
