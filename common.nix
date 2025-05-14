@@ -437,6 +437,7 @@ in {
       ignoreDups = true;
       ignoreSpace = true;
       save = 100000;
+      saveNoDups = true;
       size = 100000;
     };
     historySubstringSearch.enable = true;
