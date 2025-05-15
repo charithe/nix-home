@@ -27,6 +27,7 @@
     syft
     telepresence2
     temurin-bin-11
+    tinygo
     tree-sitter
     trivy
   ];
