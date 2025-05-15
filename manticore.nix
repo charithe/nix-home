@@ -30,5 +30,6 @@
     tinygo
     tree-sitter
     trivy
+    wasmedge
   ];
 }
