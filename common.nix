@@ -48,6 +48,7 @@ in {
     duf
     erlang
     fd
+    git-filter-repo
     gitui
     gleam
     glibc
