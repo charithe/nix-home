@@ -130,6 +130,7 @@ in {
     uv
     vale
     vivid
+    wabt
     yamllint
     yq-go
     ytt
