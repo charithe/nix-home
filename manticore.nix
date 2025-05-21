@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     antora
+    binaryen
     clickhouse
     corepack_latest
     cosign
