@@ -79,6 +79,7 @@ in {
         pkgs.kubernetes-helmPlugins.helm-secrets
       ];
     })
+    llama-cpp
     meld
     minikube
     nerd-fonts.anonymice
