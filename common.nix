@@ -31,6 +31,7 @@ in {
     #   echo "Hello, ${config.home.username}!"
     # '')
     age
+    aider-chat
     alejandra
     angle-grinder
     asciidoctor
