@@ -27,7 +27,7 @@
     spire
     syft
     telepresence2
-    temurin-bin-11
+    temurin-bin-17
     tinygo
     tree-sitter
     trivy
