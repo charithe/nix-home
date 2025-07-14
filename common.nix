@@ -112,6 +112,7 @@ in {
     procs
     protobuf
     pspg
+    regctl
     restic
     ripgrep
     ripgrep-all
