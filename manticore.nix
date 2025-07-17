@@ -17,7 +17,7 @@
     ghz
     glasskube
     istioctl
-    jetbrains.idea-community
+    #jetbrains.idea-community
     jose
     natscli
     #netlify-cli

@@ -81,6 +81,7 @@ in {
       ];
     })
     llama-cpp
+    lsr
     meld
     minikube
     nerd-fonts.anonymice
@@ -117,12 +118,14 @@ in {
     ripgrep
     ripgrep-all
     rustup
+    sd
     shellcheck
     skaffold
     skopeo
     spacer
     sqlite
     stern
+    sttr
     tailspin
     #tfoldpkg.terraform
     terraform
