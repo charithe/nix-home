@@ -105,6 +105,7 @@ in {
     nodejs
     numbat
     ollama
+        oras
     pandoc
     panicparse
     patchelf
