@@ -40,6 +40,7 @@ in {
     buildkit
     buf
     cargo-binstall
+    chafa
     charm-freeze
     cmake
     difftastic
@@ -423,6 +424,61 @@ in {
 
   programs.nnn = {
     enable = true;
+  };
+
+  programs.yazi = {
+    enable = true;
+    enableZshIntegration = true;
+    shellWrapperName = "y";
+    initLua = ''
+        require("full-border"):setup()
+        require("git"):setup()
+        require("yatline"):setup({
+            theme = require("yatline-catppuccin"):setup("mocha"),
+        })
+    '';
+
+    plugins = with pkgs.yaziPlugins; {
+      inherit full-border git glow nord smart-paste vcs-files wl-clipboard yatline yatline-catppuccin ;
+    };
+
+    keymap = {
+        mgr.prepend_keymap = [
+        {
+            on   = [ "g" "c" ];
+            run  = "plugin vcs-files";
+            desc = "Show Git file changes";
+        }
+        {
+            on = "<C-y>";
+            run = ["plugin wl-clipboard"];
+        }
+        ];
+    };
+
+    settings = {
+        mgr.ratio = [1 3 4];
+
+        plugin.prepend_fetchers = [
+        {
+            id   = "git";
+            name = "*";
+            run  = "git";
+        }
+        {
+            id   = "git";
+            name = "*/";
+            run  = "git";
+        }
+        ];
+
+        plugin. prepend_previewers = [
+        {
+            name = "*.md";
+            run = "glow";
+        }
+        ];
+    };
   };
 
   programs.zoxide = {
