@@ -131,7 +131,6 @@ in {
     tailspin
     #tfoldpkg.terraform
     terraform
-    timg
     topgrade
     tokei
     trippy
