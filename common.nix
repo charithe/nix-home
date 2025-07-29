@@ -431,53 +431,53 @@ in {
     enableZshIntegration = true;
     shellWrapperName = "y";
     initLua = ''
-        require("full-border"):setup()
-        require("git"):setup()
-        require("yatline"):setup({
-            theme = require("yatline-catppuccin"):setup("mocha"),
-        })
+      require("full-border"):setup()
+      require("git"):setup()
+      require("yatline"):setup({
+          theme = require("yatline-catppuccin"):setup("mocha"),
+      })
     '';
 
     plugins = with pkgs.yaziPlugins; {
-      inherit full-border git glow nord smart-paste vcs-files wl-clipboard yatline yatline-catppuccin ;
+      inherit full-border git glow nord smart-paste vcs-files wl-clipboard yatline yatline-catppuccin;
     };
 
     keymap = {
-        mgr.prepend_keymap = [
+      mgr.prepend_keymap = [
         {
-            on   = [ "g" "c" ];
-            run  = "plugin vcs-files";
-            desc = "Show Git file changes";
+          on = ["g" "c"];
+          run = "plugin vcs-files";
+          desc = "Show Git file changes";
         }
         {
-            on = "<C-y>";
-            run = ["plugin wl-clipboard"];
+          on = "<C-y>";
+          run = ["plugin wl-clipboard"];
         }
-        ];
+      ];
     };
 
     settings = {
-        mgr.ratio = [1 3 4];
+      mgr.ratio = [1 3 4];
 
-        plugin.prepend_fetchers = [
+      plugin.prepend_fetchers = [
         {
-            id   = "git";
-            name = "*";
-            run  = "git";
+          id = "git";
+          name = "*";
+          run = "git";
         }
         {
-            id   = "git";
-            name = "*/";
-            run  = "git";
+          id = "git";
+          name = "*/";
+          run = "git";
         }
-        ];
+      ];
 
-        plugin. prepend_previewers = [
+      plugin. prepend_previewers = [
         {
-            name = "*.md";
-            run = "glow";
+          name = "*.md";
+          run = "glow";
         }
-        ];
+      ];
     };
   };
 
@@ -489,7 +489,7 @@ in {
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
-    enableCompletion = true;
+    enableCompletion = false;
     enableVteIntegration = true;
     envExtra = ''
       export PATH=$PATH:$HOME/.local/bin:$HOME/.krew/bin
@@ -540,15 +540,8 @@ in {
       export LS_COLORS="''$(vivid generate one-light)"
 
       zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
-      zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
-      # disable sort when completing `git checkout`
-      zstyle ':completion:*:git-checkout:*' sort false
-      # set descriptions format to enable group support
-      zstyle ':completion:*:descriptions' format '[%d]'
-      # force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
-      zstyle ':completion:*' menu no
-      # preview directory's content with eza when completing cd
-      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+      zstyle ':autocomplete:*' delay 0.1
+      zstyle ':autocomplete:*' min-input 3
     '';
     profileExtra = ''
       export PAGER=bat
@@ -580,10 +573,10 @@ in {
           ];
         }
         {
-          name = "Aloxaf/fzf-tab";
-        }
-        {
-          name = "Freed-Wu/fzf-tab-source";
+          name = "marlonrichert/zsh-autocomplete";
+          tags = [
+            "depth:1"
+          ];
         }
         {
           name = "chisui/zsh-nix-shell";
