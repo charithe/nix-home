@@ -510,6 +510,7 @@ in {
     syntaxHighlighting = {
       enable = true;
     };
+    # initContent = let initExtra = lib.mkOrder 1000 '' [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh ''; in lib.mkMerge [initExtra];
     initExtra = ''
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
@@ -539,9 +540,12 @@ in {
 
       export LS_COLORS="''$(vivid generate one-light)"
 
+      # zsh-autocomplete key bindings
       zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
       zstyle ':autocomplete:*' delay 0.1
       zstyle ':autocomplete:*' min-input 3
+      bindkey              '^I'         menu-complete
+      bindkey "$terminfo[kcbt]" reverse-menu-complete
     '';
     profileExtra = ''
       export PAGER=bat
