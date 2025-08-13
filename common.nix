@@ -44,6 +44,8 @@ in {
     charm-freeze
     cmake
     difftastic
+    docker
+    docker-buildx
     docker-compose
     du-dust
     duckdb
@@ -558,7 +560,6 @@ in {
     shellAliases = {
       cd = "z";
       cdi = "zi";
-      docker = "podman";
       hm = "home-manager";
       j = "just";
       k = "kubectl";
