@@ -24,3 +24,4 @@ keybind = ctrl+shift+right_bracket=goto_split:next
 keybind = ctrl+shift+left_bracket=goto_split:previous
 
 # async-backend = epoll
+maximize = true
