@@ -52,6 +52,7 @@ in {
     duf
     erlang
     fd
+    flyctl
     git-filter-repo
     gitui
     gleam

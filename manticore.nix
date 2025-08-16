@@ -12,7 +12,6 @@
     crane
     dbeaver-bin
     dive
-    flyctl
     gcc
     ghz
     glasskube
