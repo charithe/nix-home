@@ -30,6 +30,7 @@
     tinygo
     tree-sitter
     trivy
+    valkey
     wasmedge
   ];
 }
