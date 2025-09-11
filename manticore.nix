@@ -14,12 +14,12 @@
     dive
     gcc
     ghz
-    glasskube
     istioctl
-    #jetbrains.idea-community
+    jetbrains.idea-community
     jose
     natscli
     #netlify-cli
+    osv-scanner
     pgformatter
     redocly
     scc
