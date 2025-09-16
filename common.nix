@@ -394,9 +394,9 @@ in {
 
   programs.go = {
     enable = true;
-        env = {
-            GOBIN = ".local/bin";
-        };
+    env = {
+      GOBIN = ".local/bin";
+    };
     package = pkgs.go_1_25;
   };
 
