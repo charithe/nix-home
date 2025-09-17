@@ -26,4 +26,4 @@ keybind = global:ctrl+/=toggle_quick_terminal
 
 # async-backend = epoll
 maximize = true
-custom-shader = "~/.config/ghostty/cursor_blaze.glsl"
+custom-shader = "~/.config/ghostty/shaders/cursor_blaze_no_trail.glsl"
