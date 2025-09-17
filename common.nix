@@ -140,6 +140,7 @@ in {
     typst
     uv
     vale
+    vals
     vivid
     wabt
     yamllint
