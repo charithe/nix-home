@@ -205,6 +205,12 @@ in {
       target = "ghostty/config";
     };
 
+    "ghostty/cursor_blaze.glsl" = {
+      enable = true;
+      source = config/ghostty/cursor_blaze.glsl;
+      target = "ghostty/cursor_blaze.glsl";
+    };
+
     "kitty" = {
       enable = true;
       source = config/kitty;
