@@ -1,6 +1,12 @@
 <configuration version="51">
     <folder id="default" label="Sync" path="/home/cell/Sync" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="G33T4HC-ZQ3GWXR-4STK7EI-BLWW6KS-HFYWMAK-TWOZMWU-6GGUK6L-P7MXOAN" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="N5B7EXG-VFOB2B4-HFXZUEO-E2AXD57-G7O7ZBT-F5TRVNJ-VRAQRQX-AUT2XA2" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="PMBTCJW-NF7QXGE-U5D337L-QQHTMJ7-FLHXMWA-6JAJNFI-OKLVZPN-FHAQEQL" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -44,6 +50,12 @@
     </folder>
     <folder id="ej9bp-qnn6e" label="Documents/Sync" path="/home/cell/Documents/Sync" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="G33T4HC-ZQ3GWXR-4STK7EI-BLWW6KS-HFYWMAK-TWOZMWU-6GGUK6L-P7MXOAN" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="N5B7EXG-VFOB2B4-HFXZUEO-E2AXD57-G7O7ZBT-F5TRVNJ-VRAQRQX-AUT2XA2" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="PMBTCJW-NF7QXGE-U5D337L-QQHTMJ7-FLHXMWA-6JAJNFI-OKLVZPN-FHAQEQL" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -85,6 +97,28 @@
             <maxTotalSize>4096</maxTotalSize>
         </xattrFilter>
     </folder>
+    <device id="G33T4HC-ZQ3GWXR-4STK7EI-BLWW6KS-HFYWMAK-TWOZMWU-6GGUK6L-P7MXOAN" name="CPH2653" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+        <autoAcceptFolders>false</autoAcceptFolders>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <maxRequestKiB>0</maxRequestKiB>
+        <untrusted>false</untrusted>
+        <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
+    </device>
+    <device id="N5B7EXG-VFOB2B4-HFXZUEO-E2AXD57-G7O7ZBT-F5TRVNJ-VRAQRQX-AUT2XA2" name="mitochondria" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+        <autoAcceptFolders>false</autoAcceptFolders>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <maxRequestKiB>0</maxRequestKiB>
+        <untrusted>false</untrusted>
+        <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
+    </device>
     <device id="PMBTCJW-NF7QXGE-U5D337L-QQHTMJ7-FLHXMWA-6JAJNFI-OKLVZPN-FHAQEQL" name="manticore.lan" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
@@ -172,6 +206,9 @@
     <defaults>
         <folder id="" label="" path="~" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
             <filesystemType>basic</filesystemType>
+            <device id="N5B7EXG-VFOB2B4-HFXZUEO-E2AXD57-G7O7ZBT-F5TRVNJ-VRAQRQX-AUT2XA2" introducedBy="">
+                <encryptionPassword></encryptionPassword>
+            </device>
             <device id="PMBTCJW-NF7QXGE-U5D337L-QQHTMJ7-FLHXMWA-6JAJNFI-OKLVZPN-FHAQEQL" introducedBy="">
                 <encryptionPassword></encryptionPassword>
             </device>
