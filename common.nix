@@ -52,6 +52,7 @@ in {
     erlang
     fd
     flyctl
+    gemini-cli
     git-filter-repo
     gitui
     gleam
