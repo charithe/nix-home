@@ -32,6 +32,7 @@ return {
           settings = {
             gopls = {
               gofumpt = true,
+              templateExtensions = { "gotmpl" },
               codelenses = {
                 gc_details = false,
                 generate = true,
@@ -50,6 +51,7 @@ return {
                 functionTypeParameters = true,
                 parameterNames = true,
                 rangeVariableTypes = false,
+                ignoredError = true,
               },
               analyses = {
                 fieldalignment = true,
