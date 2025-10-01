@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     antora
     binaryen
+    claude-code
     clickhouse
     corepack_latest
     cosign
