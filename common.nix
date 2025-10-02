@@ -403,7 +403,7 @@ in {
   programs.go = {
     enable = true;
     env = {
-      GOBIN = "~/.local/bin";
+      GOBIN = "/home/cell/.local/bin";
     };
     package = pkgs.go_1_25;
   };
