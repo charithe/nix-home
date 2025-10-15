@@ -25,6 +25,6 @@ keybind = ctrl+shift+left_bracket=goto_split:previous
 keybind = global:ctrl+/=toggle_quick_terminal
 
 maximize = true
-custom-shader = "~/.config/ghostty/shaders/cursor_blaze_no_trail.glsl"
+#custom-shader = "~/.config/ghostty/shaders/cursor_blaze_no_trail.glsl"
 
 shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo
