@@ -279,6 +279,25 @@ in {
     enableZshIntegration = true;
   };
 
+  programs.delta = {
+    enable = false;
+    options = {
+      features = "decorations";
+      side-by-side = true;
+      syntax-theme = "Dracula";
+      dark = true;
+      hyperlinks = true;
+      line-numbers = true;
+      pager = "less";
+    };
+  };
+
+  programs.difftastic = {
+    git = {
+      enable = true;
+    };
+  };
+
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
@@ -328,29 +347,14 @@ in {
 
   programs.git = {
     enable = true;
-    aliases = {
-      cm = "checkout main";
-      lg = "log --color --graph --decorate --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset'";
-      sync = "!BRANCH=$(git symbolic-ref --short HEAD) && git fetch upstream && git merge --ff-only upstream/$BRANCH && git push origin $BRANCH";
-      wta = "!f(){ git worktree add -b $1 ../$1; cd ../$1; }; f";
-      wtr = "!f(){ git worktree remove $1 && git branch -D $1; }; f";
-    };
-    delta = {
-      enable = false;
-      options = {
-        features = "decorations";
-        side-by-side = true;
-        syntax-theme = "Dracula";
-        dark = true;
-        hyperlinks = true;
-        line-numbers = true;
-        pager = "less";
+    settings = {
+      aliases = {
+        cm = "checkout main";
+        lg = "log --color --graph --decorate --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset'";
+        sync = "!BRANCH=$(git symbolic-ref --short HEAD) && git fetch upstream && git merge --ff-only upstream/$BRANCH && git push origin $BRANCH";
+        wta = "!f(){ git worktree add -b $1 ../$1; cd ../$1; }; f";
+        wtr = "!f(){ git worktree remove $1 && git branch -D $1; }; f";
       };
-    };
-    difftastic = {
-      enable = true;
-    };
-    extraConfig = {
       branch = {
         sort = "-committerdate";
       };
@@ -374,6 +378,10 @@ in {
           insteadOf = "https://github.com/";
         };
       };
+      user = {
+        email = "charith@lucidelectricdreams.com";
+        name = "Charith Ellawala";
+      };
     };
     includes = [
       {
@@ -395,8 +403,6 @@ in {
       key = "CE36ADA89FCB6D9D30F152935CEC9525A9DBF2BE";
       signByDefault = true;
     };
-    userEmail = "charith@lucidelectricdreams.com";
-    userName = "Charith Ellawala";
   };
 
   programs.go = {
