@@ -348,7 +348,7 @@ in {
   programs.git = {
     enable = true;
     settings = {
-      aliases = {
+      alias = {
         cm = "checkout main";
         lg = "log --color --graph --decorate --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset'";
         sync = "!BRANCH=$(git symbolic-ref --short HEAD) && git fetch upstream && git merge --ff-only upstream/$BRANCH && git push origin $BRANCH";
