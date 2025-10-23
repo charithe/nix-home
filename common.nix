@@ -33,7 +33,7 @@ in {
     age
     alejandra
     angle-grinder
-    asciidoctor
+    asciidoctor-with-extensions
     ast-grep
     btop
     buildkit
