@@ -193,6 +193,13 @@ in {
   };
 
   xdg.configFile = {
+    "docker/daemon.json" = {
+      enable = true;
+      source = config/docker/daemon.json;
+      target = "docker/daemon.json";
+      recursive = true;
+    };
+
     "gh-dash" = {
       enable = true;
       source = config/gh-dash;
@@ -611,6 +618,23 @@ in {
           ];
         }
       ];
+    };
+  };
+
+  systemd.user.services = {
+    docker-rootless = {
+      Unit = {
+        Description = "Rootless Docker daemon";
+      };
+
+      Service = {
+        Type = "simple";
+        ExecStart = "${pkgs.docker}/bin/dockerd-rootless";
+      };
+
+      Install = {
+        WantedBy = ["default.target"];
+      };
     };
   };
 
