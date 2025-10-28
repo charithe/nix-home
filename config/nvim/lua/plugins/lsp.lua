@@ -1,22 +1,23 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    init = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      keys[#keys + 1] = { "K", "<cmd>Lspsaga hover_doc<CR>" }
-      keys[#keys + 1] = { "<leader>gi", "<cmd>Lspsaga incoming_calls<CR>" }
-      keys[#keys + 1] = { "<leader>go", "<cmd>Lspsaga outgoing_calls<CR>" }
-      keys[#keys + 1] = { "<leader>gf", "<cmd>Lspsaga finder<CR>" }
-      keys[#keys + 1] = { "<leader>gd", "<cmd>Lspsaga peek_definition<CR>" }
-      keys[#keys + 1] = { "<leader>gt", "<cmd>Lspsaga peek_type_definition<CR>" }
-      keys[#keys + 1] = { "<leader>gs", "<cmd>Lspsaga outline<CR>" }
-    end,
     dependencies = {
       "mason-org/mason.nvim",
       "mason-org/mason-lspconfig.nvim",
     },
     opts = {
       servers = {
+        ["*"] = {
+          keys = {
+            { "K", "<cmd>Lspsaga hover_doc<CR>", desc = "Hover documentation" },
+            { "<leader>gi", "<cmd>Lspsaga incoming_calls<CR>", desc = "Incoming calls" },
+            { "<leader>go", "<cmd>Lspsaga outgoing_calls<CR>", desc = "Outgoing calls" },
+            { "<leader>gf", "<cmd>Lspsaga finder<CR>", desc = "Find occurrences" },
+            { "<leader>gd", "<cmd>Lspsaga peek_definition<CR>", desc = "Go to definition" },
+            { "<leader>gt", "<cmd>Lspsaga peek_type_definition<CR>", desc = "Go to type definition" },
+            { "<leader>gs", "<cmd>Lspsaga outline<CR>", desc = "Outline" },
+          },
+        },
         bacon_ls = {
           enabled = diagnostics == "bacon-ls",
         },
