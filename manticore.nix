@@ -15,6 +15,7 @@
     dive
     gcc
     ghz
+    grype
     istioctl
     jetbrains.idea-community
     jose
