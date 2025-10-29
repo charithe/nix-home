@@ -46,7 +46,7 @@ in {
     docker
     docker-buildx
     docker-compose
-    du-dust
+    dust
     duckdb
     duf
     erlang
