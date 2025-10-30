@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: let
   tfoldpkg = import (builtins.fetchTarball {
@@ -535,10 +536,7 @@ in {
       enable = true;
     };
     # initContent = let initExtra = lib.mkOrder 1000 '' [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh ''; in lib.mkMerge [initExtra];
-    initExtra = ''
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    '';
-    initExtraFirst = ''
+    initContent = lib.mkBefore ''
       if [[ -r "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
           source "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
       fi
@@ -570,13 +568,15 @@ in {
       zstyle ':autocomplete:*' min-input 3
       bindkey              '^I'         menu-complete
       bindkey "$terminfo[kcbt]" reverse-menu-complete
+
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
     profileExtra = ''
       export PAGER=bat
       export LESS='-F -g -i -M -R -S -w -X -z-4'
       # export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
       # export DOCKER_SOCKET=/run/user/1000/podman/podman.sock
-      export KIND_EXPERIMENTAL_PROVIDER=podman
+      # export KIND_EXPERIMENTAL_PROVIDER=podman
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
     '';
     shellAliases = {
