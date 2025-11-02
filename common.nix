@@ -267,9 +267,12 @@ in {
     enable = true;
     enableZshIntegration = true;
     settings = {
-      auto_sync = false;
+      auto_sync = true;
+      command_chaining = true;
       dialect = "uk";
       show_preview = true;
+      sync_address = "http://192.168.1.213:8888";
+      sync_frequency = "10m";
     };
   };
 
