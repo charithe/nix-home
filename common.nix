@@ -87,6 +87,8 @@ in {
     llama-cpp
     lsr
     lstr
+    lua
+    luarocks
     meld
     minikube
     nerd-fonts.anonymice
