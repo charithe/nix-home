@@ -52,7 +52,7 @@ in {
     duf
     erlang
     fd
-    flyctl
+    #flyctl
     gemini-cli
     git-filter-repo
     gitui
