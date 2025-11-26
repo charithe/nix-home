@@ -47,5 +47,6 @@ in {
     trivy
     valkey
     wasmedge
+    wasm-tools
   ];
 }
