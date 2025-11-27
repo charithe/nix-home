@@ -48,5 +48,6 @@ in {
     valkey
     wasmedge
     wasm-tools
+    wkg
   ];
 }
