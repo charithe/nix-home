@@ -21,7 +21,7 @@ in {
     binaryen
     claude-code
     #clickhouse
-    corepack_latest
+    #corepack
     cosign261
     crane
     dbeaver-bin
