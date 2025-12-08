@@ -36,6 +36,7 @@ in {
     #netlify-cli
     osv-scanner
     pgformatter
+    pnpm
     redocly
     scc
     spire
