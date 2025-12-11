@@ -26,6 +26,7 @@ in {
     crane
     dbeaver-bin
     dive
+    envoy-bin
     gcc
     ghz
     grype
