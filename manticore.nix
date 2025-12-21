@@ -22,7 +22,7 @@ in {
     claude-code
     #clickhouse
     #corepack
-        #cosign261
+    #cosign261
     cosign
     crane
     dbeaver-bin
