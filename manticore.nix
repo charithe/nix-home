@@ -17,6 +17,7 @@ in {
   };
 
   home.packages = with pkgs; [
+        amp-cli
     antora
     binaryen
     claude-code
@@ -32,7 +33,7 @@ in {
     ghz
     grype
     istioctl
-    jetbrains.idea-community
+    jetbrains.idea-oss
     jose
     natscli
     #netlify-cli
