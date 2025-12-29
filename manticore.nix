@@ -17,7 +17,7 @@ in {
   };
 
   home.packages = with pkgs; [
-        amp-cli
+    amp-cli
     antora
     binaryen
     claude-code
