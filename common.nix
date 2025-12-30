@@ -121,6 +121,7 @@ in {
     procs
     protobuf
     pspg
+    quickemu
     regctl
     restic
     ripgrep
