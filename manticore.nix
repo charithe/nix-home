@@ -35,6 +35,7 @@ in {
     istioctl
     jetbrains.idea-oss
     jose
+    litestream
     natscli
     #netlify-cli
     osv-scanner
