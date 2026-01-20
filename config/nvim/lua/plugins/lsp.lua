@@ -79,6 +79,7 @@ return {
         terraform_lsp = {},
         tsserver = {},
         ty = {},
+        vale_ls = { enabled = false },
         yamlls = {},
         zls = {},
       },
