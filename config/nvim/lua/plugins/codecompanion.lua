@@ -6,7 +6,7 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
-      strategies = {
+      interactions = {
         cmd = {
           adapter = "ollama",
           model = "qwen3-coder-next",
