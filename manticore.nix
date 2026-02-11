@@ -35,6 +35,7 @@ in {
     istioctl
     jetbrains.idea-oss
     jose
+    mitmproxy
     natscli
     #netlify-cli
     osv-scanner
