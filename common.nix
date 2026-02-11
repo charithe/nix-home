@@ -424,7 +424,7 @@ in {
     env = {
       GOBIN = "/home/cell/.local/bin";
     };
-    package = pkgs.go_1_25;
+    package = pkgs.go_1_26;
   };
 
   programs.home-manager.enable = true;
