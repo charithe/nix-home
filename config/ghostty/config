@@ -8,7 +8,8 @@ font-feature = liga
 font-feature = zero
 font-feature = -ss19
 #theme = AtelierSulphurpool
-theme = Cobalt2
+#theme = Cobalt2
+theme = "Electron Highlighter"
 
 clipboard-read = allow
 clipboard-write = allow
