@@ -183,6 +183,12 @@ in {
       target = ".p10k.zsh";
     };
 
+    ".ripgreprc" = {
+      enable = true;
+      source = config/ripgrep/ripgreprc;
+      target = ".ripgreprc";
+    };
+
     ".terraformrc" = {
       enable = true;
       source = config/terraform/terraformrc;
