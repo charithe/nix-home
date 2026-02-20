@@ -43,6 +43,7 @@ in {
     chafa
     charm-freeze
     cmake
+    diffnav
     difftastic
     docker
     docker-buildx
