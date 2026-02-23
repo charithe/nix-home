@@ -17,16 +17,11 @@ in {
   };
 
   home.packages = with pkgs; [
-    amp-cli
     antora
     binaryen
     claude-code
-    #clickhouse
-    #corepack
-    #cosign261
     cosign
     crane
-    dbeaver-bin
     dive
     envoy-bin
     gcc
@@ -35,11 +30,9 @@ in {
     istioctl
     jetbrains.idea-oss
     jose
-    mitmproxy
     natscli
     #netlify-cli
     osv-scanner
-    pgformatter
     pnpm
     redocly
     scc

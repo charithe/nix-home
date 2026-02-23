@@ -57,7 +57,6 @@ in {
     gemini-cli
     git-filter-repo
     gitui
-    gleam
     glibc
     glow
     gnumake
