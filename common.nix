@@ -90,7 +90,6 @@ in {
     lua
     luarocks
     meld
-    minikube
     nerd-fonts.anonymice
     nerd-fonts.aurulent-sans-mono
     nerd-fonts.blex-mono
