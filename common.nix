@@ -85,6 +85,7 @@ in {
       ];
     })
     llama-cpp
+        llmfit
     lsr
     lstr
     lua
