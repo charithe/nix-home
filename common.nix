@@ -85,7 +85,7 @@ in {
       ];
     })
     llama-cpp
-        llmfit
+    llmfit
     lsr
     lstr
     lua
@@ -152,6 +152,7 @@ in {
     ytt
     zigpkgs.master
     zig-shell-completions
+    zizmor
   ];
 
   home.file = {
