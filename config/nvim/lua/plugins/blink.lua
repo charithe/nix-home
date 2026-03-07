@@ -10,6 +10,9 @@ return {
         default = {
           "emoji",
         },
+        per_filetype = {
+          codecompanion = { "codecompanion" },
+        },
         providers = {
           emoji = {
             module = "blink-emoji",
