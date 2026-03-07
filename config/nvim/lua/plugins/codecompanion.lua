@@ -9,15 +9,15 @@ return {
       interactions = {
         cmd = {
           adapter = "ollama",
-          model = "qwen3-coder-next",
+          model = "qwen3-coder",
         },
         chat = {
           adapter = "ollama",
-          model = "qwen3-coder-next",
+          model = "qwen3-coder",
         },
         inline = {
           adapter = "ollama",
-          model = "qwen3-coder-next",
+          model = "qwen3-coder",
         },
       },
       opts = {
