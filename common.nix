@@ -586,10 +586,9 @@ in {
     '';
     profileExtra = ''
       export PAGER=bat
-      export LESS='-F -g -i -M -R -S -w -X -z-4'
-      # export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
-      # export DOCKER_SOCKET=/run/user/1000/podman/podman.sock
-      # export KIND_EXPERIMENTAL_PROVIDER=podman
+      export LESS='-F -g -i -M -R -S -w -X'
+      export DOCKER_HOST=unix:///run/user/1000/docker.sock
+      export DOCKER_SOCKET=/run/user/1000/docker.sock
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
     '';
     shellAliases = {
