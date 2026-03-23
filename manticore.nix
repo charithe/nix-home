@@ -42,7 +42,6 @@ in {
     temurin-bin-21
     tinygo
     tree-sitter
-    trivy
     valkey
     wasmedge
     wasm-tools
