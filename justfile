@@ -18,3 +18,15 @@ collect-garbage:
 upgrade:
     @ topgrade --only custom_commands flatpak gnome_shell_extensions helm home_manager krew nix rustup system
 
+sandbox:
+    #!/usr/bin/env bash
+
+    set -euo pipefail
+    virt-install \
+        --name=dev \
+        --memory=16384 \
+        --cpu=host-passthrough \
+        --osinfo=fedora43 \
+        --disk=$HOME/sandboxes/Fedora-Cloud-Base-Generic-43-1.6.x86_64.qcow2 \
+        --import
+

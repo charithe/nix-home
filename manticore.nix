@@ -36,11 +36,9 @@ in {
     pnpm
     redocly
     scc
-    spire
     syft
     telepresence2
     temurin-bin-21
-    tinygo
     tree-sitter
     valkey
     wasmedge
