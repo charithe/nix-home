@@ -33,5 +33,9 @@
       inherit pkgs;
       modules = [./common.nix ./manticore.nix {nixpkgs.overlays = [zig.overlays.default];}];
     };
+    homeConfigurations."cell@devbox" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      modules = [./common.nix ./devbox.nix {nixpkgs.overlays = [zig.overlays.default];}];
+    };
   };
 }

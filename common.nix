@@ -33,15 +33,10 @@ in {
     # '')
     age
     alejandra
-    angle-grinder
     asciidoctor-with-extensions
-    ast-grep
     btop
     buildkit
     buf
-    cargo-binstall
-    chafa
-    charm-freeze
     cmake
     diffnav
     difftastic
@@ -51,10 +46,8 @@ in {
     dust
     duckdb
     duf
-    erlang
     fd
     #flyctl
-    gemini-cli
     git-filter-repo
     gitui
     glibc
@@ -62,21 +55,14 @@ in {
     gnumake
     gopls
     gops
-    gotestsum
-    grpcurl
     helmfile
     hexyl
-    httpstat
-    hurl
-    hyperfine
     ibm-plex
     jq
     jwt-cli
     just
-    kind
     ko
     krew
-    kubeconform
     kubectl
     (pkgs.wrapHelm pkgs.kubernetes-helm {
       plugins = [
@@ -84,9 +70,6 @@ in {
         pkgs.kubernetes-helmPlugins.helm-secrets
       ];
     })
-    llama-cpp
-    lima
-    llmfit
     lsr
     lstr
     lua
@@ -109,15 +92,10 @@ in {
     nerd-fonts.sauce-code-pro
     nerd-fonts.symbols-only
     nix-index
-    nodejs
     numbat
-    ollama
     oras
     pandoc
-    panicparse
-    patchelf
     pgcli
-    pgweb
     postgresql_17
     procs
     protobuf
@@ -128,7 +106,6 @@ in {
     ripgrep
     ripgrep-all
     rustup
-    sd
     shellcheck
     skaffold
     skopeo
@@ -140,20 +117,13 @@ in {
     #tfoldpkg.terraform
     terraform
     topgrade
-    tokei
-    trippy
-    typst
-    uv
-    vale
     vals
     vivid
-    wabt
     yamllint
     yq-go
     ytt
     zigpkgs.master
     zig-shell-completions
-    zizmor
   ];
 
   home.file = {
@@ -422,6 +392,7 @@ in {
     ];
     lfs.enable = true;
     signing = {
+      format = "openpgp";
       key = "CE36ADA89FCB6D9D30F152935CEC9525A9DBF2BE";
       signByDefault = true;
     };
@@ -518,6 +489,11 @@ in {
         }
       ];
     };
+  };
+
+  programs.zellij = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   programs.zoxide = {

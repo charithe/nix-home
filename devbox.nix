@@ -19,27 +19,46 @@ in {
   home.packages = with pkgs; [
     antora
     binaryen
+    cargo-binstall
+    chafa
+    charm-freeze
+    claude-code
     cosign
     crane
     dive
+    envoy-bin
     gcc
+    gemini-cli
     ghz
+    gotestsum
+    grpcurl
     grype
+    httpstat
+    hurl
+    hyperfine
     istioctl
-    jetbrains.idea-oss
     jose
+    kind
+    kubeconform
     natscli
-    #netlify-cli
-    osv-scanner
     nodejs
+    osv-scanner
+    panicparse
     pnpm
     redocly
     scc
+    skopeo
     syft
     telepresence2
     temurin-bin-21
+    tokei
+    trippy
     tree-sitter
+    uv
     valkey
+    wasmedge
     wasm-tools
+    wkg
+    zizmor
   ];
 }
