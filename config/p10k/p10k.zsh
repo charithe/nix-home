@@ -33,6 +33,7 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     os_icon                 # os identifier
+    drop_env
     dir                     # current directory
     vcs                     # git status
     kubecontext
@@ -1675,6 +1676,12 @@
   # Type `p10k help segment` for documentation and a more sophisticated example.
   function prompt_example() {
     p10k segment -b 1 -f 3 -i '⭐' -t 'hello, %n'
+  }
+
+  function prompt_drop_env() {
+    if [[ ! -z $DROP_ENV ]]; then
+        p10k segment -b 1 -f 3 -t "$DROP_ENV"
+    fi
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job

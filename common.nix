@@ -182,6 +182,13 @@ in {
       recursive = true;
     };
 
+    "drop/base.toml" = {
+      enable = true;
+      source = config/drop/base.toml;
+      target = "drop/base.toml";
+      recursive = true;
+    };
+
     "gh-dash" = {
       enable = true;
       source = config/gh-dash;
@@ -493,7 +500,7 @@ in {
 
   programs.zellij = {
     enable = true;
-    enableZshIntegration = false;
+    enableZshIntegration = true;
   };
 
   programs.zoxide = {
