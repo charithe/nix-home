@@ -36,18 +36,18 @@
 # best not to expose history, but allow shells in Drop environments
 # to create isolated history files, one per each environment.
 mounts = [
-  "/nix/store",
+    "/nix/store",
     #"~/go::rw",
-  "~/.config/atuin",
-  "~/.config/nvim",
-  "~/.local/bin:~/.local-host/bin", # Rename .local/bin from host, so sandbox has own, writeable .local/bin
-  "~/.local/share/nvim",
-  "~/.nix-profile",
-  "~/.p10k.zsh",
-  "~/.zshenv",
-  "~/.zprofile",
-  "~/.zshrc",
-  "~/tmp::rw",
+    "~/.config/atuin",
+    "~/.config/nvim",
+    "~/.local/bin:~/.local-host/bin", # Rename .local/bin from host, so sandbox has own, writeable .local/bin
+    "~/.local/share/nvim::rw",
+    "~/.nix-profile",
+    "~/.p10k.zsh",
+    "~/.zshenv",
+    "~/.zprofile",
+    "~/.zshrc",
+    "~/tmp::rw",
 ]
 
 # Paths to dirs or files to block access to.
@@ -67,36 +67,36 @@ blocked_paths = []
 # Do not expose variables containing secrets. Expose all
 # other variables needed for convenient work.
 exposed_vars = [
-  "XDG_DATA_HOME",
-  "XDG_CONFIG_HOME",
-  "XDG_STATE_HOME",
-  "XDG_DATA_DIRS",
-  "XDG_CONFIG_DIRS",
-  "XDG_CACHE_HOME",
-  "XDG_RUNTIME_DIR",
-  "SHELL",
-  "LC_*",
-  "XTERM_SHELL",
-  "EDITOR",
-  "PWD",
-  "LOGNAME",
-  "HOME",
-  "LANG",
-  "LESSCLOSE",
-  "LESSOPEN",
-  "LS_COLORS",
-  "XTERM_LOCALE",
-  "TERM",
-  "USER",
-  "SHLVL",
-  "PATH",
+    "XDG_DATA_HOME",
+    "XDG_CONFIG_HOME",
+    "XDG_STATE_HOME",
+    "XDG_DATA_DIRS",
+    "XDG_CONFIG_DIRS",
+    "XDG_CACHE_HOME",
+    "XDG_RUNTIME_DIR",
+    "SHELL",
+    "LC_*",
+    "XTERM_SHELL",
+    "EDITOR",
+    "PWD",
+    "LOGNAME",
+    "HOME",
+    "LANG",
+    "LESSCLOSE",
+    "LESSOPEN",
+    "LS_COLORS",
+    "XTERM_LOCALE",
+    "TERM",
+    "USER",
+    "SHLVL",
+    "PATH",
 ]
 
 # New environment variables passed to the sandboxed process.
 # Values can include existing vars as ${VAR_NAME}
 set_vars = [
-  "debian_chroot=drop", # Add '(drop)' prefix to shell prompts on Debian-based systems
-  "PATH=${PATH}:${HOME}/.local-host/bin", # Add .local/bin from host (mounted as .local-host/bin) to PATH.
+    "debian_chroot=drop",                   # Add '(drop)' prefix to shell prompts on Debian-based systems
+    "PATH=${PATH}:${HOME}/.local-host/bin", # Add .local/bin from host (mounted as .local-host/bin) to PATH.
 ]
 
 [net]
