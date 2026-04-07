@@ -37,8 +37,10 @@
 # to create isolated history files, one per each environment.
 mounts = [
     "/nix/store",
-    #"~/go::rw",
+    "/run/user/1000/docker.sock",
     "~/.config/atuin",
+    "~/.config/direnv",
+    "~/.config/docker/daemon.json",
     "~/.config/nvim",
     "~/.local/bin:~/.local-host/bin", # Rename .local/bin from host, so sandbox has own, writeable .local/bin
     "~/.local/share/nvim::rw",
@@ -90,6 +92,8 @@ exposed_vars = [
     "USER",
     "SHLVL",
     "PATH",
+    "DOCKER_HOST",
+    "DOCKER_SOCKET",
 ]
 
 # New environment variables passed to the sandboxed process.
@@ -97,6 +101,8 @@ exposed_vars = [
 set_vars = [
     "debian_chroot=drop",                   # Add '(drop)' prefix to shell prompts on Debian-based systems
     "PATH=${PATH}:${HOME}/.local-host/bin", # Add .local/bin from host (mounted as .local-host/bin) to PATH.
+    "JUST_TEMPDIR=/tmp",
+
 ]
 
 [net]

@@ -38,6 +38,7 @@ in {
     buildkit
     buf
     cmake
+    devbox
     diffnav
     difftastic
     docker
