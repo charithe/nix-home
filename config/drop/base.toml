@@ -136,7 +136,7 @@ mode = "isolated"
 #          and bound to ALL the host's IP addresses. This is
 #          convenient, but must be used with care, make sure the host
 #          has firewall configured to filter outside traffic.
-tcp_published_ports = []
+tcp_published_ports = ["127.0.0.1/3000:3000"]
 # UDP ports published from the sandbox.
 udp_published_ports = []
 
@@ -144,6 +144,6 @@ udp_published_ports = []
 # Entries have the form
 # HOST_PORT[:DROP_PORT]
 # If DROP_PORT is not specified, it defaults to HOST_PORT
-tcp_host_ports = []
+tcp_host_ports = ["6379", "8080"]
 # Localhost UDP ports open on the host that the sandbox can access.
 udp_host_ports = []

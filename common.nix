@@ -241,6 +241,12 @@ in {
       target = "vale";
       recursive = true;
     };
+
+    "zellij/config.kdl" = {
+      enable = true;
+      source = config/zellij/config.kdl;
+      target = "zellij/config.kdl";
+    };
   };
 
   xdg.dataFile = {
@@ -444,6 +450,10 @@ in {
     enable = true;
   };
 
+  programs.superfile = {
+    enable = true;
+  };
+
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
@@ -502,6 +512,7 @@ in {
   programs.zellij = {
     enable = true;
     enableZshIntegration = true;
+    exitShellOnExit = true;
   };
 
   programs.zoxide = {
