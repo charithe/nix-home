@@ -38,6 +38,7 @@
 mounts = [
     "/nix/store",
     "/run/user/1000/docker.sock",
+    "/run/user/1000/wayland-0",
     "~/.config/atuin",
     "~/.config/direnv",
     "~/.config/docker/daemon.json",
@@ -94,6 +95,7 @@ exposed_vars = [
     "PATH",
     "DOCKER_HOST",
     "DOCKER_SOCKET",
+    "WAYLAND_DISPLAY",
 ]
 
 # New environment variables passed to the sandboxed process.
@@ -102,7 +104,6 @@ set_vars = [
     "debian_chroot=drop",                   # Add '(drop)' prefix to shell prompts on Debian-based systems
     "PATH=${PATH}:${HOME}/.local-host/bin", # Add .local/bin from host (mounted as .local-host/bin) to PATH.
     "JUST_TEMPDIR=/tmp",
-
 ]
 
 [net]

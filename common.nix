@@ -511,8 +511,6 @@ in {
 
   programs.zellij = {
     enable = true;
-    enableZshIntegration = true;
-    #exitShellOnExit = true;
   };
 
   programs.zoxide = {
