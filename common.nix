@@ -17,6 +17,9 @@ in {
 
   home.username = "cell";
   home.homeDirectory = "/home/cell";
+  home.sessionVariables = {
+        DO_NOT_TRACK = "true";
+  };
   home.stateVersion = "23.05";
   home.packages = with pkgs; [
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -348,6 +351,7 @@ in {
         pm = "pr merge -s -d";
       };
       git_protocol = "ssh";
+      telemetry = "disabled";
     };
   };
 
