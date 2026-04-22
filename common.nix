@@ -444,6 +444,11 @@ in {
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
+    withNodeJs = false;
+    withPerl = false;
+    withPython3 = true;
+    withRuby = false;
+    waylandSupport = true;
   };
 
   programs.nnn = {
