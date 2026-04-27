@@ -18,7 +18,7 @@ in {
   home.username = "cell";
   home.homeDirectory = "/home/cell";
   home.sessionVariables = {
-        DO_NOT_TRACK = "true";
+    DO_NOT_TRACK = "true";
   };
   home.stateVersion = "23.05";
   home.packages = with pkgs; [
@@ -99,7 +99,7 @@ in {
     numbat
     oras
     pandoc
-    pgcli
+    #pgcli
     postgresql_17
     procs
     protobuf
