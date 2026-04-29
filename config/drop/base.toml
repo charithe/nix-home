@@ -37,6 +37,7 @@
 # to create isolated history files, one per each environment.
 mounts = [
     "/nix/store",
+    "/nix/var/nix::rw",
     "/run/user/1000/docker.sock",
     "/run/user/1000/wayland-0",
     "~/.config/atuin",
