@@ -61,6 +61,7 @@ in {
     gops
     helmfile
     hexyl
+    hyperfine
     ibm-plex
     jq
     jwt-cli
