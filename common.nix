@@ -396,7 +396,7 @@ in {
     };
     includes = [
       {
-        condition = "gitdir:~/work/**";
+        condition = "gitdir:~/work*/**";
         contents = {
           user = {
             email = "charith@cerbos.dev";
