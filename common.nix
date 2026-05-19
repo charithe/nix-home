@@ -100,7 +100,7 @@ in {
     numbat
     oras
     pandoc
-    #pgcli
+    pgcli
     postgresql_17
     procs
     protobuf
