@@ -138,7 +138,7 @@ mode = "isolated"
 #          and bound to ALL the host's IP addresses. This is
 #          convenient, but must be used with care, make sure the host
 #          has firewall configured to filter outside traffic.
-tcp_published_ports = ["3000", "3592", "3593", "3594", "5432", "8080"]
+tcp_published_ports = ["3000"]
 # UDP ports published from the sandbox.
 udp_published_ports = []
 
