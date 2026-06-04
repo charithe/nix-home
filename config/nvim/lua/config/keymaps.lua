@@ -3,4 +3,3 @@
 -- Add any additional keymaps here
 
 vim.keymap.del({ "n" }, "<leader>L")
-vim.cmd([[cab cc CodeCompanion]])
