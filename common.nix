@@ -51,10 +51,8 @@ in {
     dust
     duckdb
     duf
-    fd
     #flyctl
     git-filter-repo
-    gitui
     glibc
     glow
     gnumake
@@ -64,7 +62,6 @@ in {
     hexyl
     hyperfine
     ibm-plex
-    jq
     jwt-cli
     just
     ko
@@ -99,10 +96,7 @@ in {
     nerd-fonts.symbols-only
     nix-index
     nsjail
-    numbat
     oras
-    pandoc
-    pgcli
     postgresql_17
     procs
     protobuf
@@ -125,7 +119,6 @@ in {
     terraform
     topgrade
     vals
-    vivid
     yamllint
     yq-go
     ytt
@@ -161,12 +154,6 @@ in {
       enable = true;
       source = config/p10k/p10k.zsh;
       target = ".p10k.zsh";
-    };
-
-    ".ripgreprc" = {
-      enable = true;
-      source = config/ripgrep/ripgreprc;
-      target = ".ripgreprc";
     };
 
     ".terraformrc" = {
@@ -335,6 +322,11 @@ in {
     enable = true;
   };
 
+  programs.fd = {
+    enable = true;
+    hidden = true;
+  };
+
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
@@ -426,6 +418,10 @@ in {
     };
   };
 
+  programs.gitui = {
+    enable = true;
+  };
+
   programs.go = {
     enable = true;
     env = {
@@ -435,6 +431,10 @@ in {
   };
 
   programs.home-manager.enable = true;
+
+  programs.jq.enable = true;
+
+  programs.jujutsu.enable = true;
 
   programs.k9s.enable = true;
 
@@ -469,8 +469,41 @@ in {
     enable = true;
   };
 
+  programs.numbat = {
+    enable = true;
+  };
+
+  programs.pandoc = {
+    enable = true;
+  };
+
+  programs.pgcli = {
+    enable = true;
+  };
+
+  programs.ripgrep = {
+    enable = true;
+    arguments = [
+      "--max-columns=150"
+      "--max-columns-preview"
+      "--hidden"
+      "--smart-case"
+      "--search-zip"
+    ];
+  };
+
+  programs.ripgrep-all = {
+    enable = true;
+  };
+
   programs.superfile = {
     enable = true;
+  };
+
+  programs.vivid = {
+    enable = true;
+    enableZshIntegration = true;
+    activeTheme = "one-light";
   };
 
   programs.yazi = {
@@ -543,7 +576,6 @@ in {
       enable = true;
       plugins = [
         "romkatv/powerlevel10k"
-        "Aloxaf/fzf-tab"
         "marlonrichert/zsh-autocomplete"
         "chisui/zsh-nix-shell"
         "zsh-users/zsh-completions"
@@ -583,6 +615,8 @@ in {
           compinit
       fi
 
+      # export LS_COLORS="''$(vivid generate one-light)"
+
       if test -n "$KITTY_INSTALLATION_DIR"; then
           export KITTY_SHELL_INTEGRATION="enabled"
           autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
@@ -593,6 +627,8 @@ in {
       autoload edit-command-line
       zle -N edit-command-line
       bindkey '^x^e' edit-command-line
+      bindkey              '^I'         menu-complete
+      bindkey "$terminfo[kcbt]" reverse-menu-complete
 
       function delete-branches() {
         git branch |
@@ -602,18 +638,30 @@ in {
           xargs --no-run-if-empty git branch --delete --force
       }
 
-      export LS_COLORS="''$(vivid generate one-light)"
+      function db() {
+        cd $HOME/work && drop run zellij
+      }
+
+      function kubectl() {
+          command kubectl "$@"
+          local ret=$?
+          if [[ -z $KUBECTL_COMPLETE ]]; then
+              source <(command kubectl completion zsh)
+              KUBECTL_COMPLETE=1
+          fi
+          return $ret
+      }
 
       # zsh-autocomplete key bindings
       zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
       zstyle ':autocomplete:*' delay 0.1
+      zstyle ':autocomplete:*' timeout 0.5
       zstyle ':autocomplete:*' min-input 3
-      bindkey              '^I'         menu-complete
-      bindkey "$terminfo[kcbt]" reverse-menu-complete
 
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
       eval "$(zsh-patina activate)"
     '';
+
     profileExtra = ''
       export PAGER=bat
       export LESS='-F -g -i -M -R -S -w -X'
@@ -621,6 +669,7 @@ in {
       export DOCKER_SOCKET=/run/user/1000/docker.sock
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
     '';
+
     shellAliases = {
       cd = "z";
       cdi = "zi";
