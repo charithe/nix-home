@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }: let
   tfoldpkg = import (builtins.fetchTarball {
@@ -130,6 +131,7 @@ in {
     ytt
     zigpkgs.master
     zig-shell-completions
+    inputs.zsh-patina.packages.${pkgs.system}.default
   ];
 
   home.file = {
@@ -251,6 +253,12 @@ in {
       enable = true;
       source = config/zellij/config.kdl;
       target = "zellij/config.kdl";
+    };
+
+    "zsh-patina/config.toml" = {
+      enable = true;
+      source = config/zsh-patina/config.toml;
+      target = "zsh-patina/config.toml";
     };
   };
 
@@ -531,6 +539,16 @@ in {
 
   programs.zsh = {
     enable = true;
+    antidote = {
+      enable = true;
+      plugins = [
+        "romkatv/powerlevel10k"
+        "Aloxaf/fzf-tab"
+        "marlonrichert/zsh-autocomplete"
+        "chisui/zsh-nix-shell"
+        "zsh-users/zsh-completions"
+      ];
+    };
     autosuggestion.enable = true;
     enableCompletion = false;
     enableVteIntegration = true;
@@ -550,13 +568,19 @@ in {
       size = 100000;
     };
     historySubstringSearch.enable = true;
-    syntaxHighlighting = {
-      enable = true;
-    };
+    syntaxHighlighting.enable = false;
+
     # initContent = let initExtra = lib.mkOrder 1000 '' [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh ''; in lib.mkMerge [initExtra];
     initContent = lib.mkBefore ''
       if [[ -r "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
           source "''${XDG_CACHE_HOME:-''$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+      fi
+
+      autoload -Uz compinit
+      if [[ -n ~/.zcompdump(#qNmh-24) ]]; then
+          compinit -C
+      else
+          compinit
       fi
 
       if test -n "$KITTY_INSTALLATION_DIR"; then
@@ -588,6 +612,7 @@ in {
       bindkey "$terminfo[kcbt]" reverse-menu-complete
 
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+      eval "$(zsh-patina activate)"
     '';
     profileExtra = ''
       export PAGER=bat
@@ -605,36 +630,6 @@ in {
       n = "navi";
       lst = "lsd --tree";
       top = "btop";
-    };
-    zplug = {
-      enable = true;
-      plugins = [
-        {
-          name = "romkatv/powerlevel10k";
-          tags = [
-            "as:theme"
-            "depth:1"
-          ];
-        }
-        {
-          name = "marlonrichert/zsh-autocomplete";
-          tags = [
-            "depth:1"
-          ];
-        }
-        {
-          name = "chisui/zsh-nix-shell";
-        }
-        {
-          name = "zsh-users/zsh-completions";
-        }
-        {
-          name = "zsh-users/zsh-syntax-highlighting";
-          tags = [
-            "defer:2"
-          ];
-        }
-      ];
     };
   };
 

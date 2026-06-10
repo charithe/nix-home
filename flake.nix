@@ -14,6 +14,7 @@
       #inputs.nixpkgs.follows = "nixpkgs";
     };
     zig.url = "github:mitchellh/zig-overlay";
+    zsh-patina.url = "github:michel-kraemer/zsh-patina";
   };
 
   outputs = {
@@ -21,20 +22,29 @@
     home-manager,
     zig,
     ...
-  }: let
+  } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     homeConfigurations."cell@mitochondria" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
+      extraSpecialArgs = {
+        inherit inputs;
+      };
       modules = [./common.nix ./mitochondria.nix {nixpkgs.overlays = [zig.overlays.default];}];
     };
     homeConfigurations."cell@manticore" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
+      extraSpecialArgs = {
+        inherit inputs;
+      };
       modules = [./common.nix ./manticore.nix {nixpkgs.overlays = [zig.overlays.default];}];
     };
     homeConfigurations."cell@devbox" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
+      extraSpecialArgs = {
+        inherit inputs;
+      };
       modules = [./common.nix ./devbox.nix {nixpkgs.overlays = [zig.overlays.default];}];
     };
   };
