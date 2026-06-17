@@ -9,6 +9,11 @@
     url = "https://github.com/NixOS/nixpkgs/archive/4ab8a3de296914f3b631121e9ce3884f1d34e1e5.tar.gz";
     sha256 = "095mc0mlag8m9n9zmln482a32nmbkr4aa319f2cswyfrln9j41cr";
   }) {system = "x86_64-linux";};
+  helm = pkgs.wrapHelm pkgs.kubernetes-helm {
+    plugins = [
+      pkgs.kubernetes-helmPlugins.helm-secrets
+    ];
+  };
 in {
   nixpkgs = {
     config = {
@@ -20,6 +25,7 @@ in {
   home.homeDirectory = "/home/cell";
   home.sessionVariables = {
     DO_NOT_TRACK = "true";
+        #HELM_PLUGINS = helm.pluginsDir;
   };
   home.stateVersion = "23.05";
   home.packages = with pkgs; [
@@ -58,6 +64,7 @@ in {
     gnumake
     gopls
     gops
+        #helm
     helmfile
     hexyl
     hyperfine
@@ -67,12 +74,6 @@ in {
     ko
     krew
     kubectl
-    (pkgs.wrapHelm pkgs.kubernetes-helm {
-      plugins = [
-        pkgs.kubernetes-helmPlugins.helm-diff
-        pkgs.kubernetes-helmPlugins.helm-secrets
-      ];
-    })
     lsr
     lstr
     lua
