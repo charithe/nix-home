@@ -25,7 +25,7 @@ in {
   home.homeDirectory = "/home/cell";
   home.sessionVariables = {
     DO_NOT_TRACK = "true";
-        #HELM_PLUGINS = helm.pluginsDir;
+    #HELM_PLUGINS = helm.pluginsDir;
   };
   home.stateVersion = "23.05";
   home.packages = with pkgs; [
@@ -64,7 +64,7 @@ in {
     gnumake
     gopls
     gops
-        #helm
+    #helm
     helmfile
     hexyl
     hyperfine
