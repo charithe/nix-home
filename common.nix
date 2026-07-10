@@ -330,7 +330,7 @@ in {
 
   programs.fzf = {
     enable = true;
-    enableZshIntegration = true;
+    enableZshIntegration = false;
     defaultCommand = "fd --type f";
     defaultOptions = [
       "--height=40%"
