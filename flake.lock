@@ -21,11 +21,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1784588016,
-        "narHash": "sha256-ouZe80aWEhMLVMkqICFDN+JUw+0FJtCr/bh+hHtRtMg=",
+        "lastModified": 1784725727,
+        "narHash": "sha256-J5+C9wsO0lhDyUalQzfplDbRjyHDYeEH5+9sdyXtwa8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "deeb6b7eb7e0c44ae1819c051ce175bd92a85100",
+        "rev": "041a999e8c1c5b731913855909e68d30ca69b8e0",
         "type": "github"
       },
       "original": {
@@ -129,11 +129,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1784508696,
-        "narHash": "sha256-ElQDE4ALwiuo5QVL9WH87H4let1eBbfkFZapoYNqYIk=",
+        "lastModified": 1784637555,
+        "narHash": "sha256-mSTfL8rCthnftUkEM5kBvNhaflza8ZLlDOqmMI3wk+c=",
         "owner": "mitchellh",
         "repo": "zig-overlay",
-        "rev": "a63f16411596ae2b6fb194543f3a830bfd609ae9",
+        "rev": "3963ba7999493bbe1fca7e1f251df48e4e963192",
         "type": "github"
       },
       "original": {
@@ -147,11 +147,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1784390509,
-        "narHash": "sha256-ME9JvEG30k4BO9fw3rbo/f6dzDfhkD8crN/qDk1NH/E=",
+        "lastModified": 1784731649,
+        "narHash": "sha256-RHikS+8bsCJnJfEr8BbgNzxjANI08cH/Ib4hx4NqDVU=",
         "owner": "michel-kraemer",
         "repo": "zsh-patina",
-        "rev": "96eb9dc30bf3657f7f70e46ea4be3c120c6a1a1c",
+        "rev": "bda9d1e3573166494efcfcfb75e119e442f2fcd1",
         "type": "github"
       },
       "original": {
