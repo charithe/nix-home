@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     autorestic
     hugo
+    typst
   ];
 
   home.file = {
