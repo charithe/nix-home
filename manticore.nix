@@ -27,7 +27,6 @@ in {
     ghz
     grype
     istioctl
-    jetbrains.idea-oss
     jose
     natscli
     #netlify-cli
