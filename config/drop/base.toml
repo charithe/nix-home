@@ -44,6 +44,7 @@ mounts = [
     "~/.config/direnv",
     "~/.config/docker/daemon.json",
     "~/.config/nvim",
+    "~/.config/ripgrep/ripgreprc",
     "~/.local/bin:~/.local-host/bin", # Rename .local/bin from host, so sandbox has own, writeable .local/bin
     "~/.local/share/nvim::rw",
     "~/.nix-profile",
