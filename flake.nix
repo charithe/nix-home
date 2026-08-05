@@ -14,7 +14,6 @@
       #inputs.nixpkgs.follows = "nixpkgs";
     };
     zig.url = "github:mitchellh/zig-overlay";
-    zsh-patina.url = "github:michel-kraemer/zsh-patina";
   };
 
   outputs = {

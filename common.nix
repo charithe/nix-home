@@ -125,7 +125,7 @@ in {
     ytt
     zigpkgs.master
     zig-shell-completions
-    inputs.zsh-patina.packages.${pkgs.system}.default
+    zsh-patina
   ];
 
   home.file = {
