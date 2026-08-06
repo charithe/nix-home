@@ -39,6 +39,7 @@ in {
     telepresence2
     temurin-bin-21
     tree-sitter
+    uv
     valkey
     wasm-tools
   ];
