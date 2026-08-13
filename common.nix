@@ -44,6 +44,7 @@ in {
     age
     alejandra
     asciidoctor-with-extensions
+    (writeShellScriptBin "box" (builtins.readFile ./config/box/box.sh))
     btop
     buildkit
     buf
