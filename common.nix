@@ -99,7 +99,7 @@ in {
     nix-index
     nsjail
     oras
-    postgresql_17
+    postgresql_18
     procs
     protobuf
     pspg
