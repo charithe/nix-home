@@ -68,6 +68,7 @@ in {
     #helm
     helmfile
     hexyl
+    hurl
     hyperfine
     ibm-plex
     jwt-cli
