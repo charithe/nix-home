@@ -49,6 +49,7 @@ in {
     buildkit
     buf
     cmake
+    delve
     devbox
     diffnav
     difftastic
