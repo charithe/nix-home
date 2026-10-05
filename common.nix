@@ -106,7 +106,6 @@ in {
     protobuf
     pspg
     quickemu
-    regctl
     restic
     ripgrep
     ripgrep-all

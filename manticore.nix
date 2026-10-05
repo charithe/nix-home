@@ -19,7 +19,7 @@ in {
   home.packages = with pkgs; [
     antora
     binaryen
-    clickhouse
+    #clickhouse
     cosign
     crane
     dive
