@@ -124,6 +124,7 @@ in {
     vals
     yamllint
     yq-go
+    yt-dlp
     ytt
     zigpkgs.master
     zig-shell-completions
