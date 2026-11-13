@@ -643,7 +643,7 @@ in {
       }
 
       function db() {
-        cd $HOME/work && drop run zellij
+        cd $HOME/work && drop run zellij option --theme tokyo-night
       }
 
       function kubectl() {
